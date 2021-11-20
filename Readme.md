@@ -10,7 +10,7 @@
  configuere o  link de acesso tanto em localhost ou online.
  Ainda na mesma pasta config.php localiza o arquivo database.php coloque as informaçoes do seu banco de dados.
 * O visaotec_cliente.sql  está dentro da pasta SQL.
-* Aterar as URls que fica nos seguintes endereços: application\config\config.php  e no arquivo public\js\util.js
+* Alterar as URls que fica nos seguintes endereços: application\config\config.php  e no arquivo public\js\util.js
   ##
 
 ![systemos](https://github.com/visaotec/SystemOS/blob/main/systemos.PNG)
