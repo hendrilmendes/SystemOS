@@ -27,16 +27,16 @@
 
                     <div class="custom-control custom-radio custom-control-inline mt-2">
                         <input type="radio" id="pessoa_fisica" name="cliente_tipo" class="custom-control-input" value="1" <?php echo set_checkbox('cliente_tipo', '1') ?> checked="">
-                        <label class="custom-control-label pt-1" for="pessoa_fisica">Pessoa física</label>
+                        <label class="custom-control-label pt-1" for="pessoa_fisica">Pessoa Física</label>
                     </div>
                     <div class="custom-control custom-radio custom-control-inline">
                         <input type="radio" id="pessoa_juridica" name="cliente_tipo" class="custom-control-input" value="2" <?php echo set_checkbox('cliente_tipo', '2') ?> >
-                        <label class="custom-control-label pt-1" for="pessoa_juridica">Pessoa jurídica</label>
+                        <label class="custom-control-label pt-1" for="pessoa_juridica">Pessoa Jurídica</label>
                     </div>
 
                     <fieldset class="mt-5 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-user-tie"></i>&nbsp;Dados pessoais</legend>
+                        <legend class="font-small"><i class="fas fa-user-tie"></i>&nbsp;Dados Pessoais</legend>
 
                         <div class="form-group row mb-3">
 
@@ -53,7 +53,7 @@
                             </div>
 
                             <div class="col-md-3">
-                                <label>Data nascimento</label>
+                                <label>Data de Nascimento</label>
                                 <input type="date" class="form-control form-control-user-date" name="cliente_data_nascimento" value="<?php echo set_value('cliente_data_nascimento'); ?>">
                                 <?php echo form_error('cliente_data_nascimento', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
@@ -81,7 +81,7 @@
 
                             <div class="col-md-3">
                                 <label class="pessoa_fisica">RG</label>
-                                <label class="pessoa_juridica">Inscrição estadual</label>
+                                <label class="pessoa_juridica">Inscrição Estadual</label>
                                 <input type="text" class="form-control form-control-user" name="cliente_rg_ie" value="<?php echo set_value('cliente_rg_ie'); ?>">
                                 <?php echo form_error('cliente_rg_ie', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
@@ -114,7 +114,7 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-map-marker-alt"></i>&nbsp;Dados de endereço</legend>
+                        <legend class="font-small"><i class="fas fa-map-marker-alt"></i>&nbsp;Dados de Endereço</legend>
 
                         <div class="form-group row mb-3">
 

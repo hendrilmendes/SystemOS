@@ -72,10 +72,10 @@
                     <table class="table table-bordered dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Nome da forma de pagamento</th>
-                                <th class="text-center">Aceita parcelamento</th>
-                                <th class="text-center">Ativa</th>
+                                <th>Código</th>
+                                <th>Formas de Pagamento</th>
+                                <th class="text-center">Parcelamento</th>
+                                <th class="text-center">Ativo</th>
                                 <th class="text-right no-sort pr-2">Ações</th>
                             </tr>
                         </thead>
@@ -96,7 +96,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Tem certeza da deleção?</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja excluir?</h5>
                                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">×</span>
                                             </button>

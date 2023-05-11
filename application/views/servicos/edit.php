@@ -29,12 +29,12 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-laptop"></i>&nbsp;Dados do serviço</legend>
+                        <legend class="font-small"><i class="fas fa-laptop"></i>&nbsp;Dados do Serviço</legend>
 
                         <div class="form-group row mb-3">
 
                             <div class="col-md-6 mb-3">
-                                <label>Nome do serviço</label>
+                                <label>Nome do Serviço</label>
                                 <input type="text" class="form-control form-control-user" name="servico_nome" placeholder="Nome do serviço" value="<?php echo $servico->servico_nome; ?>">
                                 <?php echo form_error('servico_nome', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
@@ -58,7 +58,7 @@
                         <div class="form-group row mb-3">
 
                             <div class="col-md-12">
-                                <label>Descrição do serviço</label>
+                                <label>Descrição do Serviço</label>
                                 <textarea class="form-control form-control-user" name="servico_descricao" style="min-height: 100px!important"><?php echo $servico->servico_descricao; ?></textarea>
                                 <?php echo form_error('servico_descricao', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>

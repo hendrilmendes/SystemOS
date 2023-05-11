@@ -29,12 +29,12 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-user-secret"></i>&nbsp;Dados pessoais</legend>
+                        <legend class="font-small"><i class="fas fa-user-secret"></i>&nbsp;Dados Pessoais</legend>
 
                         <div class="form-group row mb-3">
 
                             <div class="col-md-6 mb-3">
-                                <label>Nome completo</label>
+                                <label>Nome Completo</label>
                                 <input type="text" class="form-control form-control-user" name="vendedor_nome_completo" placeholder="Nome completo" value="<?php echo $vendedor->vendedor_nome_completo; ?>">
                                 <?php echo form_error('vendedor_nome_completo', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
@@ -61,7 +61,7 @@
                                 <?php echo form_error('vendedor_telefone', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
                             <div class="col-md-3">
-                                <label>Telefone fixo</label>
+                                <label>Telefone Fixo</label>
                                 <input type="text" class="form-control form-control-user sp_celphones" name="vendedor_telefone" placeholder="Telefone fixo" value="<?php echo $vendedor->vendedor_telefone; ?>">
                                 <?php echo form_error('vendedor_telefone', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
@@ -81,7 +81,7 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-map-marker-alt"></i>&nbsp;Dados de endereço</legend>
+                        <legend class="font-small"><i class="fas fa-map-marker-alt"></i>&nbsp;Dados de Endereço</legend>
 
                         <div class="form-group row mb-3">
 
@@ -145,7 +145,7 @@
                         <div class="form-group row">
 
                             <div class="col-md-3">
-                                <label>Vendedor ativo</label>
+                                <label>Vendedor Ativo</label>
                                 <select class="custom-select" name="vendedor_ativo">
                                     <option value="0" <?php echo ($vendedor->vendedor_ativo == 0 ? 'selected' : ''); ?>>Não</option>
                                     <option value="1" <?php echo ($vendedor->vendedor_ativo == 1 ? 'selected' : ''); ?>>Sim</option>

@@ -29,18 +29,18 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-cubes"></i>&nbsp;Dados da marca</legend>
+                        <legend class="font-small"><i class="fas fa-cubes"></i>&nbsp;Dados da Marca</legend>
 
                         <div class="form-group row mb-3">
 
                             <div class="col-md-8 mb-3">
-                                <label>Nome da marca</label>
+                                <label>Marca</label>
                                 <input type="text" class="form-control form-control-user" name="marca_nome" placeholder="Nome da marca" value="<?php echo $marca->marca_nome; ?>">
                                 <?php echo form_error('marca_nome', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
                             <div class="col-md-4">
-                                <label>Marca ativa</label>
+                                <label>Ativo</label>
                                 <select class="custom-select" name="marca_ativa">
                                     <option value="0" <?php echo ($marca->marca_ativa == 0 ? 'selected' : ''); ?>>Não</option>
                                     <option value="1" <?php echo ($marca->marca_ativa == 1 ? 'selected' : ''); ?>>Sim</option>

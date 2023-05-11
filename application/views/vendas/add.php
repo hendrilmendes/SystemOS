@@ -12,7 +12,7 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url('os'); ?>">Ordens de serviços</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url('vendas'); ?>">Vendas</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $titulo; ?></li>
             </ol>
         </nav>
@@ -27,7 +27,7 @@
 
                     <fieldset id="vendas" class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Escolha os produtos</legend>
+                        <legend class="font-small"><i class="fas fa-shopping-cart"></i>&nbsp;&nbsp;Escolha os Produtos</legend>
 
                         <div class="form-group row">
                             <div class="ui-widget col-lg-12 mb-1 mt-1">
@@ -42,9 +42,9 @@
                                     <tr>
                                         <th></th>
                                         <th class="" style="width: 55%">Produto</th>
-                                        <th class="text-right pr-2" style="width: 12%">Valor unitário</th>
-                                        <th class="text-center" style="width: 8%">Qty</th>
-                                        <th class="" style="width: 8%">% Desc</th>
+                                        <th class="text-right pr-2" style="width: 12%">Valor Unitário</th>
+                                        <th class="text-center" style="width: 8%">Quantidade</th>
+                                        <th class="" style="width: 8%">Desc. em %</th>
                                         <th class="text-right pr-2" style="width: 15%">Total</th>
                                         <th class="" style="width: 25%"></th>
                                         <th class="" style="width: 25%"></th>
@@ -56,19 +56,19 @@
                                 <tfoot >
                                     <tr class="">
                                         <td colspan="5" class="text-right border-0">
-                                            <label class="font-weight-bold pt-1" for="total">Valor de desconto:</label>
+                                            <label class="font-weight-bold pt-1" for="total">Valor do Desconto:</label>
                                         </td>
                                         <td class="text-right border-0">
-                                            <input type="text" name="venda_valor_desconto" class="form-control form-control-user text-right pr-1" data-format="$ 0,0.00" data-cell="L1" data-formula="SUM(H1:H5)" readonly="">
+                                            <input type="text" name="venda_valor_desconto" class="form-control form-control-user text-right pr-1" data-format="$ 0.0,00" data-cell="L1" data-formula="SUM(H1:H5)" readonly="">
                                         </td>
                                         <td class="border-0">&nbsp;</td>
                                     </tr>
                                     <tr class="">
                                         <td colspan="5" class="text-right border-0">
-                                            <label class="font-weight-bold pt-1" for="total">Total a pagar:</label>
+                                            <label class="font-weight-bold pt-1" for="total">Total a Pagar:</label>
                                         </td>
                                         <td class="text-right border-0">
-                                            <input type="text" name="venda_valor_total" class="form-control form-control-user text-right pr-1" data-format="$ 0,0.00" data-cell="G2" data-formula="SUM(F1:F5)" readonly="">
+                                            <input type="text" name="venda_valor_total" class="form-control form-control-user text-right pr-1" data-format="$ 0.0,00" data-cell="G2" data-formula="SUM(F1:F5)" readonly="">
                                         </td>
                                         <td class="border-0">&nbsp;</td>
                                     </tr>
@@ -80,13 +80,13 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="far fa-money-bill-alt"></i>&nbsp;&nbsp;Dados da venda</legend>
+                        <legend class="font-small"><i class="far fa-money-bill-alt"></i>&nbsp;&nbsp;Dados da Venda</legend>
 
                         <div class="">
                             <div class="form-group row">
 
                                 <div class="col-sm-6 mb-1 mb-sm-0">
-                                    <label class="small my-0">Escolha o cliente <span class="text-danger">*</span></label>
+                                    <label class="small my-0">Escolha o Cliente <span class="text-danger">*</span></label>
                                     <select class="custom-select contas_receber" id="venda_cliente_id" name="venda_cliente_id" required="">
                                         <option value="">Escolha</option>
                                         <?php foreach ($clientes as $cliente): ?>
@@ -98,11 +98,11 @@
 
 
                                 <div class="col-sm-6 mb-1 mb-sm-0">
-                                    <label class="small my-0">Tipo da venda<span class="text-danger">*</span></label>
+                                    <label class="small my-0">Tipo da Venda<span class="text-danger">*</span></label>
                                     <select class="custom-select" id="venda_tipo" name="venda_tipo" required="">
                                         <option value="">Escolha...</option>
-                                        <option value="1">Venda à vista</option>
-                                        <option value="2">Venda à prazo</option>
+                                        <option value="1">Venda à Vista</option>
+                                        <option value="2">Venda à Prazo</option>
                                     </select>
                                     <?php echo form_error('venda_tipo', '<div class="text-danger small">', '</div>') ?>
                                 </div>
@@ -111,7 +111,7 @@
 
                             <div class="form-group row">
                                 <div class="col-md-6">
-                                    <label class="small my-0">Forma de pagamento <span class="text-danger">*</span></label>
+                                    <label class="small my-0">Forma de Pagamento <span class="text-danger">*</span></label>
                                     <select id="id_pagamento" class="custom-select forma-pagamento" id="venda_forma_pagamento_id" name="venda_forma_pagamento_id" required="">
                                         <option value="">Escolha</option>
                                         <?php foreach ($formas_pagamentos as $forma_pagamento): ?>
@@ -122,7 +122,7 @@
                                 </div>
 
                                 <div class="col-md-6">
-                                    <label class="small my-0">Escolha o vendedor <span class="text-danger">*</span></label>
+                                    <label class="small my-0">Escolha o Vendedor <span class="text-danger">*</span></label>
                                     <select id="id_vendedor" class="custom-select vendedor" id="venda_vendedor_id" name="venda_vendedor_id" required="">
                                         <option value="">Escolha</option>
                                         <?php foreach ($vendedores as $vendedor): ?>

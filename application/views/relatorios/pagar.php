@@ -40,20 +40,20 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-calendar-alt"></i></i>&nbsp;&nbsp;Escolha uma opção</legend>
+                        <legend class="font-small"><i class="fas fa-calendar-alt"></i></i>&nbsp;&nbsp;Escolha uma Opção</legend>
 
                         <div class="form-group row pt-3 pl-3">
                             <div class="custom-control custom-radio col offset-md-1 mb-2">
                                 <input type="radio" id="customRadio1" name="contas" value="pagas" class="custom-control-input" checked="">
-                                <label class="custom-control-label" for="customRadio1">Contas pagas</label>
+                                <label class="custom-control-label" for="customRadio1">Contas Pagas</label>
                             </div>
                             <div class="custom-control custom-radio ml-auto col mb-2">
                                 <input type="radio" id="customRadio2" name="contas" value="a_pagar" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio2">Contas a pagar</label>
+                                <label class="custom-control-label" for="customRadio2">Contas a Pagar</label>
                             </div>
                             <div class="custom-control custom-radio ml-auto col">
                                 <input type="radio" id="customRadio3" name="contas" value="vencidas" class="custom-control-input">
-                                <label class="custom-control-label" for="customRadio3">Contas vencidas</label>
+                                <label class="custom-control-label" for="customRadio3">Contas Vencidas</label>
                             </div>
 
                         </div>
@@ -62,7 +62,7 @@
 
 
                     <div class="mt-3">
-                        <button class="btn btn-primary btn-sm mr-2">Gerar relatório</button>
+                        <button class="btn btn-primary btn-sm mr-2">Gerar Relatório</button>
                     </div>
 
                 </form>

@@ -336,10 +336,10 @@ class Clientes extends CI_Controller {
             // Calcula os números para verificar se o CPF é verdadeiro
             for ($t = 9; $t < 11; $t++) {
                 for ($d = 0, $c = 0; $c < $t; $c++) {
-                    $d += $cpf{$c} * (($t + 1) - $c);
+                    $d += $cpf[$c] * (($t + 1) - $c);
                 }
                 $d = ((10 * $d) % 11) % 10;
-                if ($cpf{$c} != $d) {
+                if ($cpf[$c] != $d) {
                     $this->form_validation->set_message('valida_cpf', 'Por favor digite um CPF válido');
                     return FALSE;
                 }
@@ -408,10 +408,10 @@ class Clientes extends CI_Controller {
 
                 //$soma2 += ($cnpj{$i} * $k);
 
-                $soma2 = intval($soma2) + ($cnpj{$i} * $k);
+                $soma2 = intval($soma2) + ($cnpj[$i] * $k);
 
                 if ($i < 12) {
-                    $soma1 = intval($soma1) + ($cnpj{$i} * $j);
+                    $soma1 = intval($soma1) + ($cnpj[$i]* $j);
                 }
 
                 $k--;
@@ -421,7 +421,7 @@ class Clientes extends CI_Controller {
             $digito1 = $soma1 % 11 < 2 ? 0 : 11 - $soma1 % 11;
             $digito2 = $soma2 % 11 < 2 ? 0 : 11 - $soma2 % 11;
 
-            if (!($cnpj{12} == $digito1) and ( $cnpj{13} == $digito2)) {
+            if (!($cnpj[12] == $digito1) and ( $cnpj[13] == $digito2)) {
                 $this->form_validation->set_message('valida_cnpj', 'Por favor digite um CNPJ válido');
                 return false;
             } else {

@@ -40,17 +40,17 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-calendar-alt"></i></i>&nbsp;&nbsp;Escolhas as datas</legend>
+                        <legend class="font-small"><i class="fas fa-calendar-alt"></i></i>&nbsp;&nbsp;Escolhas as Datas</legend>
 
                         <div class="form-group row">
 
                             <div class="col-sm-6 mb-1 mb-sm-0">
-                                <label class="small my-0">Data inicial</label>
+                                <label class="small my-0">Data Inicial</label>
                                 <input type="date" class="form-control form-control-user-date" name="data_inicial" required="">
                             </div>
 
                             <div class="col-sm-6 mb-1 mb-sm-0">
-                                <label class="small my-0">Data final</label>
+                                <label class="small my-0">Data Final</label>
                                 <input type="date" class="form-control form-control-user-date" name="data_final">
                             </div>
 
@@ -59,7 +59,7 @@
                     </fieldset>
 
                     <div class="mt-3">
-                        <button class="btn btn-primary btn-sm mr-2">Gerar relatório</button>
+                        <button class="btn btn-primary btn-sm mr-2">Gerar Relatório</button>
                     </div>
 
                 </form>

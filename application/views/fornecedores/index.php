@@ -78,8 +78,8 @@
                     <table class="table table-bordered dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>#</th>
-                                <th>Nome fantasia</th>
+                                <th>Código</th>
+                                <th>Empresa</th>
                                 <th>CNPJ</th>
                                 <th>Telefone fixo</th>
                                 <th>E-mail</th>
@@ -106,7 +106,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Tem certeza da deleção?</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja excluir?</h5>
                                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">×</span>
                                             </button>

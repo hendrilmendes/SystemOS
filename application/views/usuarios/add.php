@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="col-md-4">
-                            <label>Perfil de acesso</label>
+                            <label>Perfil de Acesso</label>
 
                             <select class="custom-select" name="perfil_usuario">
 

@@ -66,12 +66,12 @@
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Código do produto</th>
-                                <th>Nome do produto</th>
+                                <th>Código do Produto</th>
+                                <th>Produto</th>
                                 <th>Marca</th>
                                 <th>Categoria</th>
-                                <th class="text-center">Estoque mínimo</th>
-                                <th class="text-center">Qtde estoque</th>
+                                <th class="text-center">Estoque Mínimo</th>
+                                <th class="text-center">Quant. em Estoque</th>
                                 <th class="text-center">Ativo</th>
                                 <th class="text-right no-sort pr-2">Ações</th>
                             </tr>
@@ -97,7 +97,7 @@
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Tem certeza da deleção?</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Tem certeza que deseja excluir?</h5>
                                             <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">×</span>
                                             </button>

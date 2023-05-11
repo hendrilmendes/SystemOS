@@ -27,17 +27,17 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fab fa-product-hunt"></i>&nbsp;Dados principais</legend>
+                        <legend class="font-small"><i class="fab fa-product-hunt"></i>&nbsp;Dados Principais</legend>
 
                         <div class="form-group row mb-3">
 
                             <div class="col-md-2 mb-3">
-                                <label>Código produto</label>
+                                <label>Código Produto</label>
                                 <input type="text" class="form-control form-control-user" name="produto_codigo" value="<?php echo $produto_codigo; ?>" readonly="">
                             </div>
 
                             <div class="col-md-10">
-                                <label>Descrição do produto</label>
+                                <label>Descrição do Produto</label>
                                 <input type="text" class="form-control form-control-user" name="produto_descricao" placeholder="Descrição do produto" value="<?php echo set_value('produto_descricao'); ?>">
                                 <?php echo form_error('produto_descricao', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>                            
@@ -74,8 +74,8 @@
                             </div>
 
                             <div class="col-md-3 mb-3">
-                                <label>Produto unidade</label>
-                                <input type="text" class="form-control form-control-user" name="produto_unidade" placeholder="Unidade do produto" value="<?php echo set_value('produto_unidade'); ?>">
+                                <label>Unidade de Medida</label>
+                                <input type="text" class="form-control form-control-user" name="produto_unidade" placeholder="Unidade de medida" value="<?php echo set_value('produto_unidade'); ?>">
                                 <?php echo form_error('produto_unidade', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
@@ -85,30 +85,30 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-funnel-dollar"></i>&nbsp;Precificação e estoque</legend>
+                        <legend class="font-small"><i class="fas fa-funnel-dollar"></i>&nbsp;Valores e Estoque</legend>
 
                         <div class="form-group row mb-3">
 
                             <div class="col-md-3">
-                                <label>Preço de custo</label>
+                                <label>Preço de Custo</label>
                                 <input type="text" class="form-control form-control-user money" name="produto_preco_custo" placeholder="Preço de custo" value="<?php echo set_value('produto_preco_custo'); ?>">
                                 <?php echo form_error('produto_preco_custo', '<small class="form-text text-danger">', '</small>'); ?>
                             </div> 
 
                             <div class="col-md-3">
-                                <label>Preço de venda</label>
+                                <label>Preço de Venda</label>
                                 <input type="text" class="form-control form-control-user money" name="produto_preco_venda" placeholder="Preço de venda" value="<?php echo set_value('produto_preco_venda'); ?>">
                                 <?php echo form_error('produto_preco_venda', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>   
 
                             <div class="col-md-3">
-                                <label>Estoque mínimo</label>
+                                <label>Estoque Mínimo</label>
                                 <input type="number" class="form-control form-control-user" name="produto_estoque_minimo" placeholder="Estoque mínimo" value="<?php echo set_value('produto_estoque_minimo'); ?>">
                                 <?php echo form_error('produto_estoque_minimo', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>   
 
                             <div class="col-md-3">
-                                <label>Quantidade em estoque</label>
+                                <label>Quantidade em Estoque</label>
                                 <input type="number" class="form-control form-control-user" name="produto_qtde_estoque" placeholder="Quantidade em estoque" value="<?php echo set_value('produto_qtde_estoque'); ?>">
                                 <?php echo form_error('produto_qtde_estoque', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>                            

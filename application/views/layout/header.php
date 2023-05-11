@@ -9,9 +9,10 @@ Todos os direitos reservados
 -->
     <head>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta charset='UTF-8'/>
+        <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+        <meta content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi' name='viewport'/>
+        <meta content='width=device-width, height=device-height, initial-scale=1.0' name='viewport'/>
         <link rel="icon" href="https://cliente.topnacional.com/public/img/favicon.png" type="image/png" sizes="100x100">
         <meta name="description" content="">
         <meta name="author" content="">

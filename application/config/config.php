@@ -10,6 +10,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 date_default_timezone_set('America/Sao_Paulo');
 
+
+/**
+ * Versão do SystemOS
+ */
+$config['app_version'] = '1.0.2';
+
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
@@ -32,7 +38,7 @@ date_default_timezone_set('America/Sao_Paulo');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'aqui configura o link do seu sistema - http://example.com/';
+$config['base_url'] = 'http://localhost/SystemOS/';
 
 
 

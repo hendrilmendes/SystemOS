@@ -64,13 +64,13 @@
                     <div class="form-group row mb-3">
 
                         <div class="col-md-3">
-                            <label>Razão social</label>
+                            <label>Razão Social</label>
                             <input type="text" class="form-control form-control-user" name="sistema_razao_social" placeholder="Razão social" value="<?php echo $sistema->sistema_razao_social; ?>">
                             <?php echo form_error('sistema_razao_social', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
 
                         <div class="col-md-3">
-                            <label>Nome fantasia</label>
+                            <label>Nome Fantasia</label>
                             <input type="text" class="form-control form-control-user" name="sistema_nome_fantasia" placeholder="Nome fantasia" value="<?php echo $sistema->sistema_nome_fantasia; ?>">
                             <?php echo form_error('sistema_nome_fantasia', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
@@ -82,7 +82,7 @@
                         </div>
 
                         <div class="col-md-3">
-                            <label>Inscrição estadual</label>
+                            <label>Inscrição Estadual</label>
                             <input type="text" class="form-control form-control-user" name="sistema_ie" placeholder="Inscrição estadual" value="<?php echo $sistema->sistema_ie; ?>">
                             <?php echo form_error('sistema_ie', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
@@ -104,13 +104,13 @@
                         </div>
 
                         <div class="col-md-3">
-                            <label>URL do site</label>
+                            <label>URL do Site</label>
                             <input type="text" class="form-control form-control-user" name="sistema_site_url" placeholder="URL do site" value="<?php echo $sistema->sistema_site_url; ?>">
                             <?php echo form_error('sistema_site_url', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
 
                         <div class="col-md-3">
-                            <label>E-mail de contato</label>
+                            <label>E-mail de Contato</label>
                             <input type="text" class="form-control form-control-user" name="sistema_email" placeholder="E-mail de contato" value="<?php echo $sistema->sistema_email; ?>">
                             <?php echo form_error('sistema_email', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
@@ -153,7 +153,7 @@
                     <div class="form-group row mb-3">
 
                         <div class="col-md-12">
-                            <label>Texto da ordem de servico e venda</label>
+                            <label>Mensagem na Ordem de Servico e Venda</label>
                             <textarea class="form-control form-control-user" name="sistema_txt_ordem_servico" placeholder="Texto da ordem de serviço e venda"><?php echo $sistema->sistema_txt_ordem_servico; ?></textarea>
                             <?php echo form_error('sistema_txt_ordem_servico', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>

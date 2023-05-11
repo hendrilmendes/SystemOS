@@ -29,7 +29,7 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-user-tie"></i>&nbsp;Dados pessoais</legend>
+                        <legend class="font-small"><i class="fas fa-user-tie"></i>&nbsp;Dados Pessoais</legend>
 
                         <div class="form-group row mb-3">
 
@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="col-md-3">
-                                <label>Data nascimento</label>
+                                <label>Data de Nascimento</label>
                                 <input type="date" class="form-control form-control-user-date" name="cliente_data_nascimento" value="<?php echo $cliente->cliente_data_nascimento; ?>">
                                 <?php echo form_error('cliente_data_nascimento', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
@@ -105,7 +105,7 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-map-marker-alt"></i>&nbsp;Dados de endereço</legend>
+                        <legend class="font-small"><i class="fas fa-map-marker-alt"></i>&nbsp;Dados de Endereço</legend>
 
                         <div class="form-group row mb-3">
 

@@ -90,17 +90,17 @@ $(document).ready(function () {
                 var servico_id = ui.item.id;
                 var servico_descricao = ui.item.value;
                 var servico_preco = ui.item.servico_preco;
-                servico_preco = servico_preco.replace('.', '');
-                servico_preco = servico_preco.replace(',', '.');
+                servico_preco = servico_preco.replace(',', '');
+                servico_preco = servico_preco.replace('.', ',');
                 var i = ++$counter;
                 var markup = '<tr>\
                     <td><input type="hidden" name="servico_id[]" value="' + servico_id + '" data-cell="A' + i + '" data-format="0" readonly></td>\
                     <td><input title="Descrição do servico" type="text" name="servico_descricao[]" value="' + servico_descricao + '" class="servico_descricao form-control form-control-user input-sm" data-cell="B' + i + '" readonly></td>\
-                    <td><input title="Valor unitário do servico" name="servico_preco[]" value="' + servico_preco + '" class="form-control form-control-user input-sm text-right money pr-1" data-cell="C' + i + '" data-format="R$ 0,0.00" readonly></td>\
-                    <td><input title="Digite a quantidade apenas em número inteiros" type="text" inputmode="numeric" pattern="[-+]?[0-9]*[.,]?[0-9]+" name="servico_quantidade[]" value="" class="qty form-control form-control-user text-center" data-cell="D' + i + '" data-format="0[.]00" required></td>\
-                    <td><input title="Insira o desconto" name="servico_desconto[]" class="form-control form-control-user input-sm text-right" value="0" data-cell="E' + i + '" data-format="0,0[.]00 %" required></td>\
-                    <td><input title="Valor total do servico selecionado" name="servico_item_total[]" class="form-control form-control-user input-sm text-right pr-1" data-cell="F' + i + '" data-format="R$ 0,0.00" data-formula="D' + i + '*(C' + i + '-(C' + i + '*E' + i + '))" readonly></td>\
-                    <td class="text-center"><input type="hidden" name="valor_desconto_servico[]" data-cell="H' + i + '"  data-format="R$ 0,0.00" data-formula="((C' + i + '*D' + i + ')-F' + i + ')"><button title="Remover o servico" class="btn-remove btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button></td>\
+                    <td><input title="Valor unitário do servico" name="servico_preco[]" value="' + servico_preco + '" class="form-control form-control-user input-sm text-right money pr-1" data-cell="C' + i + '" data-format="R$ 0.0,00" readonly></td>\
+                    <td><input title="Digite a quantidade apenas em número inteiros" type="text" inputmode="numeric" pattern="[-+]?[0-9]*[.,]?[0-9]+" name="servico_quantidade[]" value="" class="qty form-control form-control-user text-center" data-cell="D' + i + '" data-format="0[,]00" required></td>\
+                    <td><input title="Insira o desconto" name="servico_desconto[]" class="form-control form-control-user input-sm text-right" value="0" data-cell="E' + i + '" data-format="0.0[,]00 %" required></td>\
+                    <td><input title="Valor total do servico selecionado" name="servico_item_total[]" class="form-control form-control-user input-sm text-right pr-1" data-cell="F' + i + '" data-format="R$ 0.0,00" data-formula="D' + i + '*(C' + i + '-(C' + i + '*E' + i + '))" readonly></td>\
+                    <td class="text-center"><input type="hidden" name="valor_desconto_servico[]" data-cell="H' + i + '"  data-format="R$ 0.0,00" data-formula="((C' + i + '*D' + i + ')-F' + i + ')"><button title="Remover o servico" class="btn-remove btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button></td>\
                 </tr>';
 
 

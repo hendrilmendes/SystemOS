@@ -12,7 +12,7 @@
 
         <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="<?php echo base_url('pagar'); ?>">Contas a pagar</a></li>
+                <li class="breadcrumb-item"><a href="<?php echo base_url('pagar'); ?>">Contas a Pagar</a></li>
                 <li class="breadcrumb-item active" aria-current="page"><?php echo $titulo; ?></li>
             </ol>
         </nav>
@@ -27,7 +27,7 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-money-bill-alt"></i>&nbsp;Dados da conta</legend>
+                        <legend class="font-small"><i class="fas fa-money-bill-alt"></i>&nbsp;Dados da Conta</legend>
 
                         <div class="form-group row mb-3">
 
@@ -43,13 +43,13 @@
                             </div>
 
                             <div class="col-md-3 mb-3">
-                                <label>Data de vencimento</label>
+                                <label>Data de Vencimento</label>
                                 <input type="date" class="form-control form-control-user-date" name="conta_pagar_data_vencimento" value="<?php echo set_value('conta_pagar_data_vencimento'); ?>">
                                 <?php echo form_error('conta_pagar_data_vencimento', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
                             <div class="col-md-2 mb-3">
-                                <label>Valor da conta</label>
+                                <label>Valor da Conta</label>
                                 <input type="text" class="form-control form-control-user-date money2" name="conta_pagar_valor" value="<?php echo set_value('conta_pagar_valor'); ?>">
                                 <?php echo form_error('conta_pagar_valor', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>

@@ -29,18 +29,18 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-user-tag"></i>&nbsp;Dados principais</legend>
+                        <legend class="font-small"><i class="fas fa-user-tag"></i>&nbsp;Dados Principais</legend>
 
                         <div class="form-group row mb-3">
 
                             <div class="col-md-6 mb-3">
-                                <label>Razão social</label>
+                                <label>Razão Social</label>
                                 <input type="text" class="form-control form-control-user" name="fornecedor_razao" placeholder="Razão social" value="<?php echo $fornecedor->fornecedor_razao; ?>">
                                 <?php echo form_error('fornecedor_razao', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Nome fantasia</label>
+                                <label>Nome Fantasia</label>
                                 <input type="text" class="form-control form-control-user" name="fornecedor_nome_fantasia" placeholder="Nome fantasia" value="<?php echo $fornecedor->fornecedor_nome_fantasia; ?>">
                                 <?php echo form_error('fornecedor_nome_fantasia', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
@@ -58,7 +58,7 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label>Inscrição estadual</label>
+                                <label>Inscrição Estadual</label>
                                 <input type="text" class="form-control form-control-user" name="fornecedor_ie" placeholder="Inscrição estadual" value="<?php echo $fornecedor->fornecedor_ie; ?>">
                                 <?php echo form_error('fornecedor_ie', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
@@ -88,7 +88,7 @@
                             </div>
                             
                             <div class="col-md-4">
-                                <label>Nome do atendente</label>
+                                <label>Nome do Atendente</label>
                                 <input type="text" class="form-control form-control-user" name="fornecedor_contato" placeholder="Nome do atendente" value="<?php echo $fornecedor->fornecedor_contato; ?>">
                                 <?php echo form_error('fornecedor_contato', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
@@ -101,7 +101,7 @@
 
                     <fieldset class="mt-4 border p-2">
 
-                        <legend class="font-small"><i class="fas fa-map-marker-alt"></i>&nbsp;Dados de endereço</legend>
+                        <legend class="font-small"><i class="fas fa-map-marker-alt"></i>&nbsp;Dados de Endereço</legend>
 
                         <div class="form-group row mb-3">
 

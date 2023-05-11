@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.7
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Tempo de geração: 10-Out-2021 às 11:28
--- Versão do servidor: 10.3.31-MariaDB-cll-lve
--- versão do PHP: 7.3.30
+-- Host: 127.0.0.1
+-- Tempo de geração: 11-Maio-2023 às 03:20
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -33,7 +32,7 @@ CREATE TABLE `categorias` (
   `categoria_nome` varchar(45) NOT NULL,
   `categoria_ativa` tinyint(1) DEFAULT NULL,
   `categoria_data_alteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `categorias`
@@ -71,7 +70,7 @@ CREATE TABLE `clientes` (
   `cliente_ativo` tinyint(1) NOT NULL,
   `cliente_obs` tinytext DEFAULT NULL,
   `cliente_data_alteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `clientes`
@@ -98,7 +97,7 @@ CREATE TABLE `contas_pagar` (
   `conta_pagar_status` tinyint(1) DEFAULT NULL,
   `conta_pagar_obs` tinytext DEFAULT NULL,
   `conta_pagar_data_alteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='		';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci COMMENT='		';
 
 --
 -- Extraindo dados da tabela `contas_pagar`
@@ -124,7 +123,7 @@ CREATE TABLE `contas_receber` (
   `conta_receber_status` tinyint(1) DEFAULT NULL,
   `conta_receber_obs` tinytext DEFAULT NULL,
   `conta_receber_data_alteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `contas_receber`
@@ -151,7 +150,7 @@ CREATE TABLE `formas_pagamentos` (
   `forma_pagamento_aceita_parc` tinyint(1) DEFAULT NULL,
   `forma_pagamento_ativa` tinyint(1) DEFAULT NULL,
   `forma_pagamento_data_alteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `formas_pagamentos`
@@ -191,7 +190,7 @@ CREATE TABLE `fornecedores` (
   `fornecedor_ativo` tinyint(1) DEFAULT NULL,
   `fornecedor_obs` tinytext DEFAULT NULL,
   `fornecedor_data_alteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `fornecedores`
@@ -210,7 +209,7 @@ CREATE TABLE `groups` (
   `id` mediumint(8) UNSIGNED NOT NULL,
   `name` varchar(20) NOT NULL,
   `description` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `groups`
@@ -231,14 +230,7 @@ CREATE TABLE `login_attempts` (
   `ip_address` varchar(45) NOT NULL,
   `login` varchar(100) NOT NULL,
   `time` int(11) UNSIGNED DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Extraindo dados da tabela `login_attempts`
---
-
-INSERT INTO `login_attempts` (`id`, `ip_address`, `login`, `time`) VALUES
-(1, '187.79.110.219', 'admin@gmail.com', 1633816516);
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -250,8 +242,8 @@ CREATE TABLE `marcas` (
   `marca_id` int(11) NOT NULL,
   `marca_nome` varchar(45) NOT NULL,
   `marca_ativa` tinyint(1) DEFAULT NULL,
-  `marca_data_alteracao` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `marca_data_alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `marcas`
@@ -259,7 +251,8 @@ CREATE TABLE `marcas` (
 
 INSERT INTO `marcas` (`marca_id`, `marca_nome`, `marca_ativa`, `marca_data_alteracao`) VALUES
 (1, 'Multilaser PRO', 1, '2020-03-31 20:17:39'),
-(3, 'HP', 1, '2020-03-31 01:24:47');
+(3, 'HP', 1, '2020-03-31 01:24:47'),
+(4, 'DELL', 1, '2023-05-10 16:22:42');
 
 -- --------------------------------------------------------
 
@@ -275,7 +268,7 @@ CREATE TABLE `ordem_tem_servicos` (
   `ordem_ts_valor_unitario` varchar(45) DEFAULT NULL,
   `ordem_ts_valor_desconto` varchar(45) DEFAULT NULL,
   `ordem_ts_valor_total` varchar(45) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='Tabela de relacionamento entre as tabelas servicos e ordem_servico';
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci COMMENT='Tabela de relacionamento entre as tabelas servicos e ordem_servico';
 
 --
 -- Extraindo dados da tabela `ordem_tem_servicos`
@@ -284,7 +277,8 @@ CREATE TABLE `ordem_tem_servicos` (
 INSERT INTO `ordem_tem_servicos` (`ordem_ts_id`, `ordem_ts_id_servico`, `ordem_ts_id_ordem_servico`, `ordem_ts_quantidade`, `ordem_ts_valor_unitario`, `ordem_ts_valor_desconto`, `ordem_ts_valor_total`) VALUES
 (2, 2, 2, 4, '80.00', '0', '320.00'),
 (11, 3, 3, 1, ' 120.00', '0 ', ' 120.00'),
-(12, 1, 1, 1, ' 80.00', '0 ', ' 80.00');
+(12, 1, 1, 1, ' 80.00', '0 ', ' 80.00'),
+(13, 3, 4, 1, ' 1200.00', '0 ', ' 1200.00');
 
 -- --------------------------------------------------------
 
@@ -308,7 +302,7 @@ CREATE TABLE `ordens_servicos` (
   `ordem_servico_status` tinyint(1) DEFAULT NULL,
   `ordem_servico_obs` tinytext DEFAULT NULL,
   `ordem_servico_data_alteracao` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `ordens_servicos`
@@ -317,7 +311,8 @@ CREATE TABLE `ordens_servicos` (
 INSERT INTO `ordens_servicos` (`ordem_servico_id`, `ordem_servico_forma_pagamento_id`, `ordem_servico_cliente_id`, `ordem_servico_data_emissao`, `ordem_servico_data_conclusao`, `ordem_servico_equipamento`, `ordem_servico_marca_equipamento`, `ordem_servico_modelo_equipamento`, `ordem_servico_acessorios`, `ordem_servico_defeito`, `ordem_servico_valor_desconto`, `ordem_servico_valor_total`, `ordem_servico_status`, `ordem_servico_obs`, `ordem_servico_data_alteracao`) VALUES
 (1, 3, 1, '2020-02-14 20:30:35', NULL, 'Fone de ouvido', 'Awell', 'AV1801', 'Mouse e carregador', 'Não sai aúdio no lado esquerdo', 'R$ 0.00', '80.00', 1, '', '2021-10-09 22:13:08'),
 (2, 1, 2, '2020-02-14 20:48:53', NULL, 'Notebook gamer', 'Awell', 'FONE01', 'Mouse e carregador', 'Não carrega', 'R$ 0.00', '80.00', 0, '', '2020-02-17 23:51:56'),
-(3, 1, 3, '2020-02-17 23:53:26', NULL, 'Notebook Sony', 'Sony', 'FONE01', 'Mouse e carregador', 'Tela trincada', 'R$ 0.00', '120.00', 0, 'Vem buscar pela manhã', '2020-02-28 22:51:34');
+(3, 1, 3, '2020-02-17 23:53:26', NULL, 'Notebook Sony', 'Sony', 'FONE01', 'Mouse e carregador', 'Tela trincada', 'R$ 0.00', '120.00', 0, 'Vem buscar pela manhã', '2020-02-28 22:51:34'),
+(4, NULL, 1, '2023-05-10 16:27:12', NULL, 'Notebook', 'Dell', 'E7270', 'Fonte', 'TESTE', 'R$ 0.00', '1,200.00', 0, '', NULL);
 
 -- --------------------------------------------------------
 
@@ -340,17 +335,18 @@ CREATE TABLE `produtos` (
   `produto_qtde_estoque` varchar(10) DEFAULT NULL,
   `produto_ativo` tinyint(1) DEFAULT NULL,
   `produto_obs` tinytext DEFAULT NULL,
-  `produto_data_alteracao` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00' ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `produto_data_alteracao` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `produtos`
 --
 
 INSERT INTO `produtos` (`produto_id`, `produto_codigo`, `produto_data_cadastro`, `produto_categoria_id`, `produto_marca_id`, `produto_fornecedor_id`, `produto_descricao`, `produto_unidade`, `produto_preco_custo`, `produto_preco_venda`, `produto_estoque_minimo`, `produto_qtde_estoque`, `produto_ativo`, `produto_obs`, `produto_data_alteracao`) VALUES
-(1, '72495380', NULL, 1, 1, 1, 'Notebook gamer', 'UN', '1.800,00', '15.031,00', '2', '9', 1, 'Produto já está auditado', '2020-04-03 06:18:57'),
+(1, '72495380', NULL, 1, 1, 1, 'Notebook gamer', 'UN', '1.800,00', '15.031,00', '2', '8', 1, 'Produto já está auditado', '2023-05-10 20:28:43'),
 (2, '50412637', NULL, 3, 3, 1, 'Fone de ouvido gamer', 'UN', '112,00', '125.844,00', '1', '5', 1, '', '2020-04-03 06:59:37'),
-(3, '41697502', NULL, 3, 3, 1, 'Mouse usb', 'UN', '9,99', '15,22', '2', '10', 1, '', '2020-04-05 00:45:59');
+(3, '41697502', NULL, 3, 3, 1, 'Mouse usb', 'UN', '9,99', '15,22', '2', '9', 1, '', '2023-05-10 20:28:43'),
+(4, '75024836', NULL, 3, 4, 1, 'NOTEBOOK DELL E7270', 'UN', '1.800,00', '2.800,00', '2', '4', 1, '', '2023-05-10 20:28:43');
 
 -- --------------------------------------------------------
 
@@ -365,7 +361,7 @@ CREATE TABLE `servicos` (
   `servico_descricao` tinytext DEFAULT NULL,
   `servico_ativo` tinyint(1) DEFAULT NULL,
   `servico_data_alteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `servicos`
@@ -399,7 +395,7 @@ CREATE TABLE `sistema` (
   `sistema_estado` varchar(2) DEFAULT NULL,
   `sistema_txt_ordem_servico` tinytext DEFAULT NULL,
   `sistema_data_alteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `sistema`
@@ -434,14 +430,14 @@ CREATE TABLE `users` (
   `last_name` varchar(50) DEFAULT NULL,
   `company` varchar(100) DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `users`
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `email`, `activation_selector`, `activation_code`, `forgotten_password_selector`, `forgotten_password_code`, `forgotten_password_time`, `remember_selector`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2y$12$/K3QCw2uqSlYxvkh1g3lzeA2P6S4aye105JYlv/Qz3.iXHRCxF4fy', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1633829720, 1, 'Visaotec', 'Sistemas', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2y$12$/K3QCw2uqSlYxvkh1g3lzeA2P6S4aye105JYlv/Qz3.iXHRCxF4fy', 'admin@admin.com', NULL, '', NULL, NULL, NULL, NULL, NULL, 1268889823, 1683762542, 1, 'Visaotec', 'Sistemas', 'ADMIN', '0'),
 (2, '::1', 'Mano', '$2y$10$5BmUGHEoHkZR3ydNQGirBe/nc96yojylKMLgsMNuhcJDJTliE8nfa', 'manoel@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1586021957, 1633829123, 1, 'Manoel', 'Souza', NULL, NULL);
 
 -- --------------------------------------------------------
@@ -454,7 +450,7 @@ CREATE TABLE `users_groups` (
   `id` int(11) UNSIGNED NOT NULL,
   `user_id` int(11) UNSIGNED NOT NULL,
   `group_id` mediumint(8) UNSIGNED NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
 -- Extraindo dados da tabela `users_groups`
@@ -480,7 +476,7 @@ CREATE TABLE `vendas` (
   `venda_valor_desconto` varchar(25) DEFAULT NULL,
   `venda_valor_total` varchar(25) DEFAULT NULL,
   `venda_data_alteracao` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `vendas`
@@ -489,7 +485,8 @@ CREATE TABLE `vendas` (
 INSERT INTO `vendas` (`venda_id`, `venda_cliente_id`, `venda_forma_pagamento_id`, `venda_vendedor_id`, `venda_tipo`, `venda_data_emissao`, `venda_valor_desconto`, `venda_valor_total`, `venda_data_alteracao`) VALUES
 (2, 2, 1, 1, 2, '2020-04-03 06:18:56', 'R$ 0.00', '15,031.00', NULL),
 (3, 3, 2, 1, 1, '2020-04-03 06:52:46', 'R$ 0.00', '251,688.00', NULL),
-(4, 2, 2, 1, 1, '2020-04-04 20:22:13', 'R$ 0.00', '152.20', NULL);
+(4, 2, 2, 1, 1, '2020-04-04 20:22:13', 'R$ 0.00', '152.20', NULL),
+(5, 1, 1, 1, 1, '2023-05-10 20:28:43', 'R$ 0.0000', '17,846.2200', NULL);
 
 -- --------------------------------------------------------
 
@@ -505,7 +502,7 @@ CREATE TABLE `venda_produtos` (
   `venda_produto_valor_unitario` varchar(20) DEFAULT NULL,
   `venda_produto_desconto` varchar(10) DEFAULT NULL,
   `venda_produto_valor_total` varchar(20) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `venda_produtos`
@@ -514,7 +511,10 @@ CREATE TABLE `venda_produtos` (
 INSERT INTO `venda_produtos` (`id_venda_produtos`, `venda_produto_id_venda`, `venda_produto_id_produto`, `venda_produto_quantidade`, `venda_produto_valor_unitario`, `venda_produto_desconto`, `venda_produto_valor_total`) VALUES
 (88, 2, 1, '1', ' 15,031.00', '0 ', ' 15031.00'),
 (89, 3, 2, '2', ' 125,844.00', '0 ', ' 251688.00'),
-(90, 4, 3, '10', ' 15.22', '0 ', ' 152.20');
+(90, 4, 3, '10', ' 15.22', '0 ', ' 152.20'),
+(91, 5, 3, '1', ' 15.22', '0 ', ' 15.22'),
+(92, 5, 4, '1', ' 2,800.00', '0 ', ' 2800.00'),
+(93, 5, 1, '1', ' 15,031.00', '0 ', ' 15031.00');
 
 -- --------------------------------------------------------
 
@@ -542,7 +542,7 @@ CREATE TABLE `vendedores` (
   `vendedor_ativo` tinyint(1) DEFAULT NULL,
   `vendedor_obs` tinytext DEFAULT NULL,
   `vendedor_data_alteracao` timestamp NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
 -- Extraindo dados da tabela `vendedores`
@@ -740,31 +740,31 @@ ALTER TABLE `groups`
 -- AUTO_INCREMENT de tabela `login_attempts`
 --
 ALTER TABLE `login_attempts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `marcas`
 --
 ALTER TABLE `marcas`
-  MODIFY `marca_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `marca_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `ordem_tem_servicos`
 --
 ALTER TABLE `ordem_tem_servicos`
-  MODIFY `ordem_ts_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `ordem_ts_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de tabela `ordens_servicos`
 --
 ALTER TABLE `ordens_servicos`
-  MODIFY `ordem_servico_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `ordem_servico_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `produtos`
 --
 ALTER TABLE `produtos`
-  MODIFY `produto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `produto_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de tabela `servicos`
@@ -794,13 +794,13 @@ ALTER TABLE `users_groups`
 -- AUTO_INCREMENT de tabela `vendas`
 --
 ALTER TABLE `vendas`
-  MODIFY `venda_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `venda_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de tabela `venda_produtos`
 --
 ALTER TABLE `venda_produtos`
-  MODIFY `id_venda_produtos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=91;
+  MODIFY `id_venda_produtos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
 
 --
 -- AUTO_INCREMENT de tabela `vendedores`

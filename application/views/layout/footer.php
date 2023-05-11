@@ -11,7 +11,8 @@ Todos os direitos reservados
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; System OS - <?php echo date('Y') ?>&nbsp; | By Visaotec Sistemas</span>
+            <span>Copyright &copy; System OS - <?php echo date('Y') ?>&nbsp; | By Visaotec Sistemas - Versão:
+            <?= $this->config->item('app_version'); ?></span>
           </div>
           &nbsp;
           <div class="copyright text-center my-auto">
