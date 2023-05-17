@@ -87,8 +87,8 @@ class Ordem_servicos extends CI_Controller {
             $servico_preco = str_replace('R$', '', $this->input->post('servico_preco'));
             $servico_item_total = str_replace('R$', '', $this->input->post('servico_item_total'));
 
-            $servico_preco = str_replace(',', '', $servico_preco);
-            $servico_item_total = str_replace(',', '', $servico_item_total);
+            $servico_preco = str_replace('.', '', $servico_preco);
+            $servico_item_total = str_replace('.', '', $servico_item_total);
 
 
             $qty_servico = count($servico_id);
@@ -207,8 +207,8 @@ class Ordem_servicos extends CI_Controller {
                 $servico_preco = str_replace('R$', '', $this->input->post('servico_preco'));
                 $servico_item_total = str_replace('R$', '', $this->input->post('servico_item_total'));
 
-                $servico_preco = str_replace(',', '', $servico_preco);
-                $servico_item_total = str_replace(',', '', $servico_item_total);
+                $servico_preco = str_replace('.', '', $servico_preco);
+                $servico_item_total = str_replace('.', '', $servico_item_total);
 
 
                 $qty_servico = count($servico_id);
@@ -339,8 +339,8 @@ class Ordem_servicos extends CI_Controller {
                 ' . 'CNPJ: ' . $empresa->sistema_cnpj . '<br/>
                 ' . $empresa->sistema_endereco . ', &nbsp;' . $empresa->sistema_numero . '<br/>
                 ' . 'CEP: ' . $empresa->sistema_cep . ', &nbsp;' . $empresa->sistema_cidade . ', &nbsp;' . $empresa->sistema_estado . '<br/>
-                    ' . 'Telefone: ' . $empresa->sistema_telefone_fixo . '<br/>
-                    ' . 'E-mail: ' . $empresa->sistema_email . '<br/>
+                ' . 'Telefone: ' . $empresa->sistema_telefone_fixo . '<br/>
+                ' . 'E-mail: ' . $empresa->sistema_email . '<br/>
                     </h4>';
 
             $html .= '<hr>';

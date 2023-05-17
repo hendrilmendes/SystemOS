@@ -14,9 +14,9 @@ class Pdf {
 
     function createPDF($html, $filename = '', $download = TRUE, $paper = 'A4', $orientation = 'portrait') {
 //        $dompdf = new dompdf\DOMPDF(); //Para localhost
-        $dompdf = new Dompdf(); //Para hospedado
-        $dompdf->load_html($html);
-        $dompdf->set_paper($paper, $orientation);
+        $dompdf = new Dompdf(); //Para 
+        $dompdf->loadHtml($html);
+        $dompdf->setPaper($paper, $orientation);
         $dompdf->render();
         if ($download)
             $dompdf->stream($filename . '.pdf', array('Attachment' => 1));

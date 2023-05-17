@@ -12,7 +12,7 @@ Todos os direitos reservados
         <div class="sidebar-brand-icon">
             <i class="fas fa-laptop"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">System OS</div>
+        <div class="sidebar-brand-text mx-3"><?= $this->config->item('app_name'); ?></div>
     </a>
 
     <!-- Divider -->

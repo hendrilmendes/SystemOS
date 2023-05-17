@@ -13,7 +13,7 @@ Todos os direitos reservados
         <meta content='IE=edge' http-equiv='X-UA-Compatible'/>
         <meta content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi' name='viewport'/>
         <meta content='width=device-width, height=device-height, initial-scale=1.0' name='viewport'/>
-        <link rel="icon" href="https://cliente.topnacional.com/public/img/favicon.png" type="image/png" sizes="100x100">
+        <link rel="icon" href="./public/img/favicon.png" type="image/png" sizes="100x100">
         <meta name="description" content="">
         <meta name="author" content="">
 

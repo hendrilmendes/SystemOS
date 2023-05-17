@@ -147,7 +147,7 @@ Todos os direitos reservados
 
                 <?php $user = $this->ion_auth->user()->row(); ?>
 
-                <span class="mr-2 d-none d-lg-inline text-gray-900"><?php echo $user->first_name; ?> </span>
+                <span class="mr-2 d-none d-lg-inline text-gray-900">Seja bem vindo(a) <br> <b><?php echo $user->first_name; ?></b> </span>
                 <span class=""><i class="far fa-user fa-2x"></i></span>
             </a>
             <!-- Dropdown - User Information -->

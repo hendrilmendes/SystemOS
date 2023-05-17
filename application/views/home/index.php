@@ -151,7 +151,7 @@ Todos os direitos reservados
 
                                 <thead>
                                     <tr>
-                                        <th>Produto</th>
+                                        <th>Produtos</th>
                                         <th class="text-center">Vendidos</th>
                                     </tr>
                                 </thead>
@@ -196,7 +196,7 @@ Todos os direitos reservados
 
                                 <thead>
                                     <tr>
-                                        <th>Serviço</th>
+                                        <th>Serviços</th>
                                         <th class="text-center">Vendidos</th>
                                     </tr>
                                 </thead>

@@ -1,4 +1,3 @@
-
 $form = $('#form').calx();
 
 /*Array para armazenar temporariamente os serviços adicionados à os*/
@@ -39,6 +38,13 @@ if ($counter > 0) {
     });
 }
 /*Fim bloco que adiciona no array "servicos_adicionados" os servicos já existentes na os*/
+
+
+$.ajaxSetup({
+    beforeSend: function(xhr) {
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+    }
+});
 
 $(document).ready(function () {
 

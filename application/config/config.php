@@ -12,9 +12,14 @@ date_default_timezone_set('America/Sao_Paulo');
 
 
 /**
+ * Nome do sistema
+ */
+$config['app_name'] = 'SystemOS';
+
+/**
  * Versão do SystemOS
  */
-$config['app_version'] = '1.0.2';
+$config['app_version'] = 'v1.0.6';
 
 /*
 |--------------------------------------------------------------------------
@@ -39,8 +44,6 @@ $config['app_version'] = '1.0.2';
 |
 */
 $config['base_url'] = 'http://localhost/SystemOS/';
-
-
 
 
 /*

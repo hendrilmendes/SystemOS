@@ -45,7 +45,7 @@
                         <div class="form-group row pt-3 pl-3">
                             <div class="custom-control custom-radio col offset-md-1 mb-2">
                                 <input type="radio" id="customRadio1" name="contas" value="pagas" class="custom-control-input" checked="">
-                                <label class="custom-control-label" for="customRadio1">Contas Pagas</label>
+                                <label class="custom-control-label" for="customRadio1">Contas Recebidas</label>
                             </div>
                             <div class="custom-control custom-radio ml-auto col mb-2">
                                 <input type="radio" id="customRadio2" name="contas" value="receber" class="custom-control-input">

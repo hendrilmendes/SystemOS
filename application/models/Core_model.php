@@ -115,7 +115,8 @@ class Core_model extends CI_Model {
      * @param string $field_seach
      * @return int
      */
-    public function generate_unique_code($table = NULL, $type_of_code = NULL, $size_of_code, $field_search) {
+    
+    public function generate_unique_code($size_of_code, $field_search, $table = NULL, $type_of_code = NULL) {
 
         do {
             $code = random_string($type_of_code, $size_of_code);

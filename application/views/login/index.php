@@ -46,7 +46,7 @@
                             
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4"><i class="fas fa-laptop"></i>&nbsp;System OS</h1>
+                                    <h1 class="h4 text-gray-900 mb-4"><i class="fas fa-laptop"></i>&nbsp;<?= $this->config->item('app_name'); ?></h1>
                                 </div>
                                 <form class="user" name="form_auth" method="POST" action="<?php echo base_url('login/auth'); ?>">
                                     <div class="form-group">
@@ -61,7 +61,8 @@
                                 </form>
                                 &nbsp; &nbsp; &nbsp; &nbsp;
                                 <div class="copyright text-center my-auto">
-                                <span>Copyright &copy; System OS <?php echo date('Y') ?>&nbsp; | By Visaotec Sistemas</span>
+                                <span>Copyright &copy; <?= $this->config->item('app_name'); ?> <?php echo date('Y') ?>&nbsp; | By Visaotec Sistemas - Versão:
+                                <?= $this->config->item('app_version'); ?></span>
                                 </div>
                             </div>
                         </div>

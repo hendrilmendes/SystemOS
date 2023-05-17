@@ -352,8 +352,8 @@ class Vendas extends CI_Controller {
                 ' . 'CNPJ: ' . $empresa->sistema_cnpj . '<br/>
                 ' . $empresa->sistema_endereco . ', &nbsp;' . $empresa->sistema_numero . '<br/>
                 ' . 'CEP: ' . $empresa->sistema_cep . ', &nbsp;' . $empresa->sistema_cidade . ', &nbsp;' . $empresa->sistema_estado . '<br/>
-                    ' . 'Telefone: ' . $empresa->sistema_telefone_fixo . '<br/>
-                    ' . 'E-mail: ' . $empresa->sistema_email . '<br/>
+                ' . 'Telefone: ' . $empresa->sistema_telefone_fixo . '<br/>
+                ' . 'E-mail: ' . $empresa->sistema_email . '<br/>
                     </h4>';
 
             $html .= '<hr>';
