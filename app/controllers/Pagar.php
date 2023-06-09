@@ -29,7 +29,7 @@ class Pagar extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Contas a pagar cadastradas',
+            'titulo' => 'Contas a Pagar Cadastradas',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),
@@ -81,7 +81,7 @@ class Pagar extends CI_Controller {
             //Erro de validação
 
             $data = array(
-                'titulo' => 'Contas a pagar cadastradas',
+                'titulo' => 'Contas a Pagar Cadastradas',
                 'styles' => array(
                     'vendor/select2/select2.min.css',
                 ),

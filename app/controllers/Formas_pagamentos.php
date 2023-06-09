@@ -22,7 +22,7 @@ class Formas_pagamentos extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Formas de pagamentos cadastradas',
+            'titulo' => 'Formas de Pagamentos Cadastradas',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),

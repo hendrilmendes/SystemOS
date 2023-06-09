@@ -27,7 +27,7 @@ class Sistema extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Editar informações do sistema',
+            'titulo' => 'Editar Informações do Sistema',
             'scripts' => array(
                 'vendor/mask/jquery.mask.min.js',
                 'vendor/mask/app.js',

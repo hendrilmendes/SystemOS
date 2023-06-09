@@ -22,7 +22,7 @@ class Servicos extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Serviços cadastrados',
+            'titulo' => 'Serviços Cadastrados',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),
@@ -70,7 +70,7 @@ class Servicos extends CI_Controller {
             //Erro de validação
 
             $data = array(
-                'titulo' => 'Cadastrar serviço',
+                'titulo' => 'Cadastrar Serviço',
                 'scripts' => array(
                     'vendor/mask/jquery.mask.min.js',
                     'vendor/mask/app.js',

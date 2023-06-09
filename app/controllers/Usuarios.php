@@ -27,7 +27,7 @@ class Usuarios extends CI_Controller {
         }
 
         $data = array(
-            'titulo' => 'Usuários cadastrados',
+            'titulo' => 'Usuários Cadastrados',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),

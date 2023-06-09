@@ -22,7 +22,7 @@ class Categorias extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Categorias cadastradas',
+            'titulo' => 'Categorias Cadastradas',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),

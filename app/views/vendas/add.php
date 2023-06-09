@@ -59,7 +59,7 @@
                                             <label class="font-weight-bold pt-1" for="total">Valor do Desconto:</label>
                                         </td>
                                         <td class="text-right border-0">
-                                            <input type="text" name="venda_valor_desconto" class="form-control form-control-user text-right pr-1" data-format="$ 0.0,00" data-cell="L1" data-formula="SUM(H1:H5)" readonly="">
+                                            <input type="text" name="venda_valor_desconto" class="form-control form-control-user text-right pr-1" data-format="$ 0,0.00" data-cell="L1" data-formula="SUM(H1:H5)" readonly="">
                                         </td>
                                         <td class="border-0">&nbsp;</td>
                                     </tr>
@@ -68,7 +68,7 @@
                                             <label class="font-weight-bold pt-1" for="total">Total a Pagar:</label>
                                         </td>
                                         <td class="text-right border-0">
-                                            <input type="text" name="venda_valor_total" class="form-control form-control-user text-right pr-1" data-format="$ 0.0,00" data-cell="G2" data-formula="SUM(F1:F5)" readonly="">
+                                            <input type="text" name="venda_valor_total" class="form-control form-control-user text-right pr-1" data-format="$ 0,0.00" data-cell="G2" data-formula="SUM(F1:F5)" readonly="">
                                         </td>
                                         <td class="border-0">&nbsp;</td>
                                     </tr>

@@ -151,8 +151,8 @@
                             </div>
 
                             <div class="col-md-3">
-                                <label>Matrícula</label>
-                                <input type="text" class="form-control form-control-user" name="vendedor_codigo" value="<?php echo $vendedor_codigo ?>" readonly="">
+                                <label>Código do Vendedor</label>
+                                <input type="text" class="form-control form-control-user" name="vendedor_codigo" value="<?php echo $vendedor_codigo ?>">
                             </div>
 
                             <div class="col-md-6">

@@ -2,7 +2,7 @@
 $(document).ready(function () {
 
     const DATATABLE_PTBR = {
-        "sEmptyTable": "Nenhum registro encontrado",
+        "sEmptyTable": "Nenhum Registro Encontrado",
         "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
         "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
         "sInfoFiltered": "(Filtrados de _MAX_ registros)",
@@ -11,7 +11,7 @@ $(document).ready(function () {
         "sLengthMenu": "_MENU_ resultados por página",
         "sLoadingRecords": "Carregando...",
         "sProcessing": "Processando...",
-        "sZeroRecords": "Nenhum registro encontrado",
+        "sZeroRecords": "Nenhum Registro Encontrado",
         "sSearch": "Pesquisar",
         "oPaginate": {
             "sNext": "Próximo",
@@ -20,8 +20,8 @@ $(document).ready(function () {
             "sLast": "Último"
         },
         "oAria": {
-            "sSortAscending": ": Ordenar colunas de forma ascendente",
-            "sSortDescending": ": Ordenar colunas de forma descendente"
+            "sSortAscending": ": Ordenar Colunas de Forma Ascendente",
+            "sSortDescending": ": Ordenar Colunas de Forma Descendente"
         },
         "select": {
             "rows": {
@@ -52,8 +52,8 @@ $(document).ready(function () {
             {
                 extend: 'pdfHtml5',
                 text: '<i class="fas fa-download"></i>',
-                title: 'Lista de produtos cadastrados',
-                filename: 'Produtos cadastrados',
+                title: 'Lista de Produtos Cadastrados',
+                filename: 'Produtos Cadastrados',
                 titleAttr: 'Exportar para PDF',
                 className: 'btn btn-primary btn-sm',
                 orientation: 'portrait',

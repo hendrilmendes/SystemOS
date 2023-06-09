@@ -25,7 +25,7 @@ class Vendas extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Vendas cadastradas',
+            'titulo' => 'Vendas Cadastradas',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),
@@ -84,8 +84,8 @@ class Vendas extends CI_Controller {
             $produto_preco_venda = str_replace('R$', '', $this->input->post('produto_preco_venda'));
             $produto_item_total = str_replace('R$', '', $this->input->post('produto_item_total'));
 
-            $produto_preco = str_replace('.', '', $produto_preco_venda);
-            $produto_item_total = str_replace('.', '', $produto_item_total);
+            $produto_preco = str_replace(',', '', $produto_preco_venda);
+            $produto_item_total = str_replace(',', '', $produto_item_total);
 
 
             $qty_produto = count($produto_id);
@@ -207,8 +207,8 @@ class Vendas extends CI_Controller {
                 $produto_preco_venda = str_replace('R$', '', $this->input->post('produto_preco_venda'));
                 $produto_item_total = str_replace('R$', '', $this->input->post('produto_item_total'));
 
-                $produto_preco = str_replace('.', '', $produto_preco_venda);
-                $produto_item_total = str_replace('.', '', $produto_item_total);
+                $produto_preco = str_replace(',', '', $produto_preco_venda);
+                $produto_item_total = str_replace(',', '', $produto_item_total);
 
 
                 $qty_produto = count($produto_id);

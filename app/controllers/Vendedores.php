@@ -22,7 +22,7 @@ class Vendedores extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Vendedores cadastrados',
+            'titulo' => 'Vendedores Cadastrados',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),

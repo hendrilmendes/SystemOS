@@ -29,7 +29,7 @@ class Receber extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Contas a receber cadastradas',
+            'titulo' => 'Contas a Receber Cadastradas',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),

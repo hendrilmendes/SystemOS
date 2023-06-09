@@ -33,7 +33,7 @@
 
                             <div class="col-md-2 mb-3">
                                 <label>Código Produto</label>
-                                <input type="text" class="form-control form-control-user" name="produto_codigo" value="<?php echo $produto_codigo; ?>" readonly="">
+                                <input type="text" class="form-control form-control-user" name="produto_codigo" value="<?php echo $produto_codigo; ?>">
                             </div>
 
                             <div class="col-md-10">

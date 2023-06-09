@@ -22,7 +22,7 @@ class Fornecedores extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Fornecedores cadastrados',
+            'titulo' => 'Fornecedores Cadastrados',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),

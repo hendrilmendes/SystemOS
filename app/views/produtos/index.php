@@ -65,7 +65,7 @@
                     <table class="table table-bordered produtos" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>Código Interno</th>
                                 <th>Código do Produto</th>
                                 <th>Produto</th>
                                 <th>Marca</th>

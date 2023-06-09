@@ -22,7 +22,7 @@ class Clientes extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Clientes cadastrados',
+            'titulo' => 'Clientes Cadastrados',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),

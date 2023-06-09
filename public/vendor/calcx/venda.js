@@ -92,11 +92,11 @@ $(document).ready(function () {
                 var markup = '<tr>\
                     <td><input type="hidden" name="produto_id[]" value="' + produto_id + '" data-cell="A' + i + '" data-format="0" readonly></td>\
                     <td><input title="Descrição do produto" type="text" name="produto_descricao[]" value="' + produto_descricao + '" class="produto_descricao form-control form-control-user input-sm" data-cell="B' + i + '" readonly></td>\
-                    <td><input title="Valor unitário do produto" name="produto_preco_venda[]" value="' + produto_preco_venda + '" class="form-control form-control-user input-sm text-right money pr-1" data-cell="C' + i + '" data-format="R$ 0.0,00" readonly></td>\
-                    <td><input title="Digite a quantidade apenas em número inteiros" type="text" inputmode="numeric" pattern="[-+]?[0-9]*[.,]?[0-9]+" name="produto_quantidade[]" value="" class="qty form-control form-control-user text-center" data-cell="D' + i + '" data-format="0[,]00" required></td>\
-                    <td><input title="Insira o desconto" name="produto_desconto[]" class="form-control form-control-user input-sm text-right" value="0" data-cell="E' + i + '" data-format="0.0[,]00 %" required></td>\
-                    <td><input title="Valor total do produto selecionado" name="produto_item_total[]" class="form-control form-control-user input-sm text-right pr-1" data-cell="F' + i + '" data-format="R$ 0.0,00" data-formula="D' + i + '*(C' + i + '-(C' + i + '*E' + i + '))" readonly></td>\
-                    <td class="text-center"><input type="hidden" name="valor_desconto_produto[]" data-cell="H' + i + '"  data-format="R$ 0.0,00" data-formula="((C' + i + '*D' + i + ')-F' + i + ')"><button title="Remover o produto" class="btn-remove btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button></td>\
+                    <td><input title="Valor unitário do produto" name="produto_preco_venda[]" value="' + produto_preco_venda + '" class="form-control form-control-user input-sm text-right money pr-1" data-cell="C' + i + '" data-format="R$ 0,0.00" readonly></td>\
+                    <td><input title="Digite a quantidade apenas em número inteiros" type="text" inputmode="numeric" pattern="[-+]?[0-9]*[.,]?[0-9]+" name="produto_quantidade[]" value="" class="qty form-control form-control-user text-center" data-cell="D' + i + '" data-format="0[.]00" required></td>\
+                    <td><input title="Insira o desconto" name="produto_desconto[]" class="form-control form-control-user input-sm text-right" value="0" data-cell="E' + i + '" data-format="0,0[.]00 %" required></td>\
+                    <td><input title="Valor total do produto selecionado" name="produto_item_total[]" class="form-control form-control-user input-sm text-right pr-1" data-cell="F' + i + '" data-format="R$ 0,0.00" data-formula="D' + i + '*(C' + i + '-(C' + i + '*E' + i + '))" readonly></td>\
+                    <td class="text-center"><input type="hidden" name="valor_desconto_produto[]" data-cell="H' + i + '"  data-format="R$ 0,0.00" data-formula="((C' + i + '*D' + i + ')-F' + i + ')"><button title="Remover o produto" class="btn-remove btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button></td>\
                 </tr>';
 
                 /*Início bloco que verifica se o produto já foi adicionado à venda*/

@@ -22,7 +22,7 @@ class Marcas extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Marcas cadastradas',
+            'titulo' => 'Marcas Cadastradas',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),

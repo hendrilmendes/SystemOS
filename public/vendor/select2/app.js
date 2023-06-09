@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     $('.contas_receber').select2({
-        placeholder: "Digite o nome do cliente...",
+        placeholder: "Digite o Nome do Cliente...",
         allowClear: true,
         "language": {
             "noResults": function () {
@@ -15,7 +15,7 @@ $(document).ready(function () {
     });
 
     $('.forma-pagamento').select2({
-        placeholder: "Forma de pagamento",
+        placeholder: "Forma de Pagamento",
         allowClear: true,
         "language": {
             "noResults": function () {
@@ -28,7 +28,7 @@ $(document).ready(function () {
     });
 
     $('.vendedor').select2({
-        placeholder: "Nome ou código",
+        placeholder: "Nome ou Código",
         allowClear: true,
         "language": {
             "noResults": function () {
@@ -42,7 +42,7 @@ $(document).ready(function () {
     
 
     $('.contas_pagar').select2({
-        placeholder: "Digite o nome fantasia...",
+        placeholder: "Digite o Nome da Empresa...",
         allowClear: true,
         "language": {
             "noResults": function () {

@@ -65,9 +65,9 @@
                     <table class="table table-bordered dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Código</th>
+                                <th>Código Interno</th>
                                 <th>Nome Completo</th>
-                                <th>Matrícula</th>
+                                <th>Código do Vendedor</th>
                                 <th>Celular</th>
                                 <th>E-mail</th>
                                 <th class="text-center">Ativo</th>

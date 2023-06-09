@@ -24,7 +24,7 @@ class Produtos extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Produtos cadastrados',
+            'titulo' => 'Produtos Cadastrados',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),
@@ -193,11 +193,11 @@ class Produtos extends CI_Controller {
 
         $produto_preco_custo = $this->input->post('produto_preco_custo');
 
-        $produto_preco_custo = str_replace('.', '', $produto_preco_custo);
-        $produto_preco_venda = str_replace('.', '', $produto_preco_venda);
+        $produto_preco_custo = str_replace('.', ',', $produto_preco_custo);
+        $produto_preco_venda = str_replace('.', ',', $produto_preco_venda);
 
-        $produto_preco_custo = str_replace('.', '', $produto_preco_custo);
-        $produto_preco_venda = str_replace('.', '', $produto_preco_venda);
+        $produto_preco_custo = str_replace('.', ',', $produto_preco_custo);
+        $produto_preco_venda = str_replace('.', ',', $produto_preco_venda);
 
 
         if ($produto_preco_custo > $produto_preco_venda) {

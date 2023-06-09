@@ -27,7 +27,7 @@ class Relatorios extends CI_Controller {
     public function vendas() {
 
         $data = array(
-            'titulo' => 'Relatórios de vendas'
+            'titulo' => 'Relatórios de Vendas'
         );
 
         $data_inicial = $this->input->post('data_inicial');

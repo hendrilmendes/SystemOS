@@ -24,7 +24,7 @@ class Ordem_servicos extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Ordem de serviços cadastradas',
+            'titulo' => 'Ordem de Serviços Cadastradas',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),
@@ -87,8 +87,8 @@ class Ordem_servicos extends CI_Controller {
             $servico_preco = str_replace('R$', '', $this->input->post('servico_preco'));
             $servico_item_total = str_replace('R$', '', $this->input->post('servico_item_total'));
 
-            $servico_preco = str_replace('.', '', $servico_preco);
-            $servico_item_total = str_replace('.', '', $servico_item_total);
+            $servico_preco = str_replace(',', '', $servico_preco);
+            $servico_item_total = str_replace(',', '', $servico_item_total);
 
 
             $qty_servico = count($servico_id);

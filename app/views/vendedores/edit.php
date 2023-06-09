@@ -153,8 +153,8 @@
                             </div>
                             
                              <div class="col-md-3">
-                                <label>Matrícula</label>
-                                <input type="text" class="form-control form-control-user" name="vendedor_codigo" value="<?php echo $vendedor->vendedor_codigo; ?>" readonly="">
+                                <label>Código do Vendedor</label>
+                                <input type="text" class="form-control form-control-user" name="vendedor_codigo" value="<?php echo $vendedor->vendedor_codigo; ?>">
                                 <?php echo form_error('vendedor_codigo', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
