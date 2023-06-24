@@ -1,4 +1,13 @@
 ## SYSTEM OS - é um  Sistema desenvolvido com framework codeigniter na versão do PHP 7.3 para gerenciar  Ordens de serviços, Estoques, Vendas, Fornecedores e muito mais. O Sistema é distribuído de forma gratuita, sendo o seu código livre para quaisquer alterações.
+
+## Screenshots
+![systemos](https://github.com/hendrilmendes/SystemOS/blob/main/systemos.PNG)
+
+## Versão
+
+![Release](https://img.shields.io/github/v/release/hendrilmendes/SystemOS)
+##
+
 ## Requerimentos
 * PHP >= 7.4.33
 * MySQL
@@ -11,17 +20,7 @@
 * Após isso, acesse a pasta public/js e em seguida o arquivo util.js. Coloque o mesmo link de acesso que foi configurado em config.php
 * O db_systemos.sql  está dentro da pasta SQL.
 #### Caso queira que instalamos o Sistema SystemOS será cobrado uma taxa!
-##
 
-## Versão
-Última versão:
-
-    $version_release = 1.0.8
-
-## Screenshots
-![systemos](https://github.com/hendrilmendes/SystemOS/blob/main/systemos.PNG)
-
-##
 ## Créditos: 
 <div>
 <a href = "https://github.com/visaotec/SystemOS" target="_blank">@Visaotec</a><br>
