@@ -14,7 +14,7 @@ class Usuarios extends CI_Controller {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
-            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor realize seu login novamente');
+            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor faça login novamente');
             redirect('login');
         }
     }
@@ -90,7 +90,7 @@ class Usuarios extends CI_Controller {
             //Erro de validação
 
             $data = array(
-                'titulo' => 'Cadastrar usuário',
+                'titulo' => 'Cadastrar Usuário',
             );
 
             $this->load->view('layout/header', $data);
@@ -185,7 +185,7 @@ class Usuarios extends CI_Controller {
             } else {
 
                 $data = array(
-                    'titulo' => 'Editar usuário',
+                    'titulo' => 'Editar Usuário',
                     'usuario' => $this->ion_auth->user($usuario_id)->row(),
                     'perfil_usuario' => $this->ion_auth->get_users_groups($usuario_id)->row(),
                 );

@@ -50,7 +50,7 @@ Todos os direitos reservados
                                 </div>
                                 <div>
                                     <div class="small text-gray-500"><?php echo formata_data_banco_sem_hora(date('Y-m-d')); ?></div>
-                                    <span class="font-weight-bold">Existem contas a receber vencidas!</span>
+                                    <span class="font-weight-bold">Existem Contas a Receber Vencidas</span>
                                 </div>
                             </a>
                         <?php endif; ?>
@@ -65,7 +65,7 @@ Todos os direitos reservados
                                 </div>
                                 <div>
                                     <div class="small text-gray-500"><?php echo formata_data_banco_sem_hora(date('Y-m-d')); ?></div>
-                                    <span class="font-weight-bold">Existem contas a pagar vencidas!</span>
+                                    <span class="font-weight-bold">Existem Contas a Pagar Vencidas</span>
                                 </div>
                             </a>
                         <?php endif; ?>
@@ -80,7 +80,7 @@ Todos os direitos reservados
                                 </div>
                                 <div>
                                     <div class="small text-gray-500"><?php echo formata_data_banco_sem_hora(date('Y-m-d')); ?></div>
-                                    <span class="font-weight-bold">Existem contas a pagar que vencem hoje!</span>
+                                    <span class="font-weight-bold">Existem Contas a Pagar que Vencem Hoje</span>
                                 </div>
                             </a>
                         <?php endif; ?>
@@ -95,7 +95,7 @@ Todos os direitos reservados
                                 </div>
                                 <div>
                                     <div class="small text-gray-500"><?php echo formata_data_banco_sem_hora(date('Y-m-d')); ?></div>
-                                    <span class="font-weight-bold">Existem contas a receber que vencem hoje!</span>
+                                    <span class="font-weight-bold">Existem Contas a Receber que Vencem Hoje</span>
                                 </div>
                             </a>
                         <?php endif; ?>
@@ -112,7 +112,7 @@ Todos os direitos reservados
                                 </div>
                                 <div>
                                     <div class="small text-gray-500"><?php echo formata_data_banco_sem_hora(date('Y-m-d')); ?></div>
-                                    <span class="font-weight-bold">Existem usuários desativados!</span>
+                                    <span class="font-weight-bold">Existem Usuários Desativados</span>
                                 </div>
                             </a>
                         <?php endif; ?>
@@ -135,7 +135,7 @@ Todos os direitos reservados
 
                 <?php $user = $this->ion_auth->user()->row(); ?>
 
-                <span class="mr-2 d-none d-lg-inline text-gray-900">Seja bem vindo(a) <br> <b><?php echo $user->first_name; ?></b> </span>
+                <span class="mr-2 d-none d-lg-inline text-gray-900">Seja Bem Vindo(a) <br> <b><?php echo $user->first_name; ?></b> </span>
                 <img class="img-profile rounded-circle" src="public/img/profile.svg">
             </a>
             <!-- Dropdown - User Information -->

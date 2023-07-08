@@ -3,12 +3,12 @@ $(document).ready(function () {
 
     const DATATABLE_PTBR = {
         "sEmptyTable": "Nenhum Registro Encontrado",
-        "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
-        "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
-        "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+        "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ Registros",
+        "sInfoEmpty": "Mostrando 0 até 0 de 0 Registros",
+        "sInfoFiltered": "(Filtrados de _MAX_ Registros)",
         "sInfoPostFix": "",
         "sInfoThousands": ".",
-        "sLengthMenu": "_MENU_ resultados por página",
+        "sLengthMenu": "_MENU_ Resultados por Página",
         "sLoadingRecords": "Carregando...",
         "sProcessing": "Processando...",
         "sZeroRecords": "Nenhum Registro Encontrado",
@@ -52,8 +52,8 @@ $(document).ready(function () {
             {
                 extend: 'pdfHtml5',
                 text: '<i class="fas fa-download"></i>',
-                title: 'Lista de Produtos Cadastrados',
-                filename: 'Produtos Cadastrados',
+                title: 'Produtos em Estoque',
+                filename: 'Relatório de Produtos em Estoque',
                 titleAttr: 'Exportar para PDF',
                 className: 'btn btn-primary btn-sm',
                 orientation: 'portrait',

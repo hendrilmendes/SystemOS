@@ -14,7 +14,7 @@ class Receber extends CI_Controller {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
-            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor realize seu login novamente');
+            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor faça login novamente');
             redirect('login');
         }
 
@@ -81,7 +81,7 @@ class Receber extends CI_Controller {
             //Erro de validação
 
             $data = array(
-                'titulo' => 'Cadastrar conta',
+                'titulo' => 'Cadastrar Conta',
                 'styles' => array(
                     'vendor/select2/select2.min.css',
                 ),
@@ -142,7 +142,7 @@ class Receber extends CI_Controller {
                 //Erro de validação
 
                 $data = array(
-                    'titulo' => 'Editar conta',
+                    'titulo' => 'Editar Conta',
                     'styles' => array(
                         'vendor/select2/select2.min.css',
                     ),

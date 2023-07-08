@@ -71,7 +71,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a title="Cadastrar novo fornecedor" href="<?php echo base_url('fornecedores/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-user-tag"></i>&nbsp;Novo</a>
+                <a title="Cadastrar Novo Fornecedor" href="<?php echo base_url('fornecedores/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-user-tag"></i>&nbsp;Novo</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -81,7 +81,7 @@
                                 <th>Código</th>
                                 <th>Empresa</th>
                                 <th>CNPJ</th>
-                                <th>Telefone fixo</th>
+                                <th>Telefone Fixo</th>
                                 <th>E-mail</th>
                                 <th class="text-center">Ativo</th>
                                 <th class="text-right no-sort pr-2">Ações</th>

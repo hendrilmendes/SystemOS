@@ -25,7 +25,7 @@
 
                 <form class="user" method="POST" name="form_edit">
 
-                    <p><strong><i class="fas fa-clock"></i>&nbsp;&nbsp;Última alteração:&nbsp;</strong><?php echo formata_data_banco_com_hora($fornecedor->fornecedor_data_alteracao); ?></p>
+                    <p><strong><i class="fas fa-clock"></i>&nbsp;&nbsp;Última Alteração:&nbsp;</strong><?php echo formata_data_banco_com_hora($fornecedor->fornecedor_data_alteracao); ?></p>
 
                     <fieldset class="mt-4 border p-2">
 
@@ -35,13 +35,13 @@
 
                             <div class="col-md-6 mb-3">
                                 <label>Razão Social</label>
-                                <input type="text" class="form-control form-control-user" name="fornecedor_razao" placeholder="Razão social" value="<?php echo $fornecedor->fornecedor_razao; ?>">
+                                <input type="text" class="form-control form-control-user" name="fornecedor_razao" placeholder="Razão Social" value="<?php echo $fornecedor->fornecedor_razao; ?>">
                                 <?php echo form_error('fornecedor_razao', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
                             <div class="col-md-6">
                                 <label>Nome Fantasia</label>
-                                <input type="text" class="form-control form-control-user" name="fornecedor_nome_fantasia" placeholder="Nome fantasia" value="<?php echo $fornecedor->fornecedor_nome_fantasia; ?>">
+                                <input type="text" class="form-control form-control-user" name="fornecedor_nome_fantasia" placeholder="Nome Fantasia" value="<?php echo $fornecedor->fornecedor_nome_fantasia; ?>">
                                 <?php echo form_error('fornecedor_nome_fantasia', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
@@ -58,14 +58,14 @@
                             </div>
 
                             <div class="col-md-4">
-                                <label>Inscrição Estadual</label>
-                                <input type="text" class="form-control form-control-user" name="fornecedor_ie" placeholder="Inscrição estadual" value="<?php echo $fornecedor->fornecedor_ie; ?>">
+                                <label>I.E</label>
+                                <input type="number" min="1" max="9999" class="form-control form-control-user" name="fornecedor_ie" placeholder="I.E" value="<?php echo $fornecedor->fornecedor_ie; ?>">
                                 <?php echo form_error('fornecedor_ie', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
                             
                             <div class="col-md-4">
-                                <label>Telefone fixo</label>
-                                <input type="text" class="form-control form-control-user sp_celphones" name="fornecedor_telefone" placeholder="Telefone fixo" value="<?php echo $fornecedor->fornecedor_telefone; ?>">
+                                <label>Telefone Fixo</label>
+                                <input type="tel" class="form-control form-control-user sp_celphones" name="fornecedor_telefone" placeholder="Telefone fixo" value="<?php echo $fornecedor->fornecedor_telefone; ?>">
                                 <?php echo form_error('fornecedor_telefone', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
@@ -76,8 +76,8 @@
                         <div class="form-group row mb-3">
 
                             <div class="col-md-4 mb-3">
-                                <label>Celular</label>
-                                <input type="text" class="form-control form-control-user sp_celphones" name="fornecedor_celular" placeholder="Celular" value="<?php echo $fornecedor->fornecedor_celular; ?>">
+                                <label>Telefone Celular</label>
+                                <input type="tel" class="form-control form-control-user sp_celphones" name="fornecedor_celular" placeholder="Telefone Celular" value="<?php echo $fornecedor->fornecedor_celular; ?>">
                                 <?php echo form_error('fornecedor_celular', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
@@ -113,7 +113,7 @@
 
                             <div class="col-md-2">
                                 <label>Número</label>
-                                <input type="text" class="form-control form-control-user" name="fornecedor_numero_endereco" value="<?php echo $fornecedor->fornecedor_numero_endereco; ?>">
+                                <input type="number" min="1" max="9999" class="form-control form-control-user" name="fornecedor_numero_endereco" value="<?php echo $fornecedor->fornecedor_numero_endereco; ?>">
                                 <?php echo form_error('fornecedor_numero_endereco', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 

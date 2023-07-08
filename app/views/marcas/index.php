@@ -71,7 +71,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a title="Cadastrar nova marca" href="<?php echo base_url('marcas/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i>&nbsp;Novo</a>
+                <a title="Cadastrar Nova Marca" href="<?php echo base_url('marcas/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i>&nbsp;Novo</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

@@ -1174,5 +1174,5 @@ body .ui-tooltip {
 	background: #aaaaaa url("images/ui-bg_flat_0_aaaaaa_40x100.png") 50% 50% repeat-x;
 	opacity: .6;
 	filter: Alpha(Opacity=60);
-	border-radius: 0px;
+	border-radius: 1rem;
 }

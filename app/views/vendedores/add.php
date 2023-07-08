@@ -60,12 +60,12 @@
                             </div>
                             <div class="col-md-3">
                                 <label>Telefone Fixo</label>
-                                <input type="text" class="form-control form-control-user sp_celphones" name="vendedor_telefone" placeholder="Telefone fixo" value="<?php echo set_value('vendedor_telefone'); ?>">
+                                <input type="tel" class="form-control form-control-user sp_celphones" name="vendedor_telefone" placeholder="Telefone Fixo" value="<?php echo set_value('vendedor_telefone'); ?>">
                                 <?php echo form_error('vendedor_telefone', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
                             <div class="col-md-3">
-                                <label>Celular</label>
-                                <input type="text" class="form-control form-control-user sp_celphones" name="vendedor_celular" placeholder="Telefone celular" value="<?php echo set_value('vendedor_celular'); ?>">
+                                <label>Telefone Celular</label>
+                                <input type="tel" class="form-control form-control-user sp_celphones" name="vendedor_celular" placeholder="Telefone Celular" value="<?php echo set_value('vendedor_celular'); ?>">
                                 <?php echo form_error('vendedor_celular', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
@@ -91,7 +91,7 @@
 
                             <div class="col-md-2">
                                 <label>Número</label>
-                                <input type="text" class="form-control form-control-user" name="vendedor_numero_endereco" value="<?php echo set_value('vendedor_numero_endereco'); ?>">
+                                <input type="number" min="1" max="9999" class="form-control form-control-user" name="vendedor_numero_endereco" value="<?php echo set_value('vendedor_numero_endereco'); ?>">
                                 <?php echo form_error('vendedor_numero_endereco', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 

@@ -58,7 +58,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a title="Cadastrar novo produto" href="<?php echo base_url('produtos/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i>&nbsp;Novo</a>
+                <a title="Cadastrar Novo Produto" href="<?php echo base_url('produtos/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i>&nbsp;Novo</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -71,7 +71,7 @@
                                 <th>Marca</th>
                                 <th>Categoria</th>
                                 <th class="text-center">Estoque Mínimo</th>
-                                <th class="text-center">Quant. em Estoque</th>
+                                <th class="text-center">Estoque Atual</th>
                                 <th class="text-center">Ativo</th>
                                 <th class="text-right no-sort pr-2">Ações</th>
                             </tr>

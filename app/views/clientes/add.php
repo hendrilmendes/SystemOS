@@ -40,24 +40,19 @@
 
                         <div class="form-group row mb-3">
 
-                            <div class="col-md-3 mb-3">
-                                <label>Nome/Razão Social</label>
-                                <input type="text" class="form-control form-control-user" name="cliente_nome" placeholder="Nome ou Razão Social" value="<?php echo set_value('cliente_nome'); ?>">
+                            <div class="col-md-6">
+                                <label class="pessoa_fisica">Nome</label>
+                                <label class="pessoa_juridica">Razão Social</label>
+                                <input type="text" class="form-control form-control-user" name="cliente_nome" value="<?php echo set_value('cliente_nome'); ?>">
                                 <?php echo form_error('cliente_nome', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Sobrenome/Fantasia</label>
-                                <input type="text" class="form-control form-control-user" name="cliente_sobrenome" placeholder="Sobrenome ou Fantasia" value="<?php echo set_value('cliente_sobrenome'); ?>">
+                                <label class="pessoa_fisica">Sobrenome</label>
+                                <label class="pessoa_juridica">Fantasia</label>
+                                <input type="text" class="form-control form-control-user" name="cliente_sobrenome" value="<?php echo set_value('cliente_sobrenome'); ?>">
                                 <?php echo form_error('cliente_sobrenome', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
-
-                            <div class="col-md-3">
-                                <label>Data de Nascimento</label>
-                                <input type="date" class="form-control form-control-user-date" name="cliente_data_nascimento" value="<?php echo set_value('cliente_data_nascimento'); ?>">
-                                <?php echo form_error('cliente_data_nascimento', '<small class="form-text text-danger">', '</small>'); ?>
-                            </div>
-
                         </div>
 
                         <div class="form-group row mb-3">
@@ -67,13 +62,13 @@
 
                                 <div class="pessoa_fisica">
                                     <label>CPF</label>
-                                    <input type="text" class="form-control form-control-user cpf" name="cliente_cpf" placeholder="CPF do cliente" value="<?php echo set_value('cliente_cpf'); ?>">
+                                    <input type="text" class="form-control form-control-user cpf" name="cliente_cpf" placeholder="CPF do Cliente" value="<?php echo set_value('cliente_cpf'); ?>">
                                     <?php echo form_error('cliente_cpf', '<small class="form-text text-danger">', '</small>'); ?>
                                 </div>
 
                                 <div class="pessoa_juridica">
                                     <label>CNPJ</label>
-                                    <input type="text" class="form-control form-control-user cnpj" name="cliente_cnpj" placeholder="CNPJ do cliente" value="<?php echo set_value('cliente_cnpj'); ?>">
+                                    <input type="text" class="form-control form-control-user cnpj" name="cliente_cnpj" placeholder="CNPJ do Cliente" value="<?php echo set_value('cliente_cnpj'); ?>">
                                     <?php echo form_error('cliente_cnpj', '<small class="form-text text-danger">', '</small>'); ?>
                                 </div>
 
@@ -81,14 +76,14 @@
 
                             <div class="col-md-3">
                                 <label class="pessoa_fisica">RG</label>
-                                <label class="pessoa_juridica">Inscrição Estadual</label>
+                                <label class="pessoa_juridica">I.E</label>
                                 <input type="text" class="form-control form-control-user" name="cliente_rg_ie" value="<?php echo set_value('cliente_rg_ie'); ?>">
                                 <?php echo form_error('cliente_rg_ie', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
                             <div class="col-md-6">
                                 <label>E-mail</label>
-                                <input type="email" class="form-control form-control-user" name="cliente_email" placeholder="E-mail do cliente" value="<?php echo set_value('cliente_email'); ?>">
+                                <input type="email" class="form-control form-control-user" name="cliente_email" placeholder="E-mail do Cliente" value="<?php echo set_value('cliente_email'); ?>">
                                 <?php echo form_error('cliente_email', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
@@ -97,14 +92,14 @@
                         <div class="form-group row mb-3">
 
                             <div class="col-md-6">
-                                <label>Telefone fixo</label>
-                                <input type="text" class="form-control form-control-user sp_celphones" name="cliente_telefone" placeholder="Telefone fixo" value="<?php echo set_value('cliente_telefone'); ?>">
+                                <label>Telefone Fixo</label>
+                                <input type="tel" class="form-control form-control-user sp_celphones" name="cliente_telefone" placeholder="Telefone Fixo" value="<?php echo set_value('cliente_telefone'); ?>">
                                 <?php echo form_error('cliente_telefone', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
                             <div class="col-md-6">
-                                <label>Telefone celular</label>
-                                <input type="text" class="form-control form-control-user sp_celphones" name="cliente_celular" placeholder="Celular do cliente" value="<?php echo set_value('cliente_celular'); ?>">
+                                <label>Telefone Celular</label>
+                                <input type="tel" class="form-control form-control-user sp_celphones" name="cliente_celular" placeholder="Celular do Cliente" value="<?php echo set_value('cliente_celular'); ?>">
                                 <?php echo form_error('cliente_celular', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
@@ -126,7 +121,7 @@
 
                             <div class="col-md-2">
                                 <label>Número</label>
-                                <input type="text" class="form-control form-control-user" name="cliente_numero_endereco" value="<?php echo set_value('cliente_numero_endereco'); ?>">
+                                <input type="number" min="1" max="9999" class="form-control form-control-user" name="cliente_numero_endereco" value="<?php echo set_value('cliente_numero_endereco'); ?>">
                                 <?php echo form_error('cliente_numero_endereco', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
@@ -178,7 +173,7 @@
                         <div class="form-group row">
 
                             <div class="col-md-4">
-                                <label>Cliente ativo</label>
+                                <label>Cliente Ativo</label>
                                 <select class="custom-select" name="cliente_ativo">
                                     <option value="0">Não</option>
                                     <option value="1">Sim</option>

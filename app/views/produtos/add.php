@@ -75,7 +75,7 @@
 
                             <div class="col-md-3 mb-3">
                                 <label>Unidade de Medida</label>
-                                <input type="text" class="form-control form-control-user" name="produto_unidade" placeholder="Unidade de medida" value="<?php echo set_value('produto_unidade'); ?>">
+                                <input type="text" class="form-control form-control-user" name="produto_unidade" placeholder="UN, KG..." value="<?php echo set_value('produto_unidade'); ?>">
                                 <?php echo form_error('produto_unidade', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 
@@ -108,7 +108,7 @@
                             </div>   
 
                             <div class="col-md-3">
-                                <label>Quantidade em Estoque</label>
+                                <label>Estoque Atual</label>
                                 <input type="number" class="form-control form-control-user" name="produto_qtde_estoque" placeholder="Quantidade em estoque" value="<?php echo set_value('produto_qtde_estoque'); ?>">
                                 <?php echo form_error('produto_qtde_estoque', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>                            

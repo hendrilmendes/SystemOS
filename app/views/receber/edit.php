@@ -25,7 +25,7 @@
 
                 <form class="user" method="POST" name="form_edit">
 
-                    <p><strong><i class="fas fa-clock"></i>&nbsp;&nbsp;Última alteração:&nbsp;</strong><?php echo formata_data_banco_com_hora($conta_receber->conta_receber_data_alteracao); ?></p>
+                    <p><strong><i class="fas fa-clock"></i>&nbsp;&nbsp;Última Alteração:&nbsp;</strong><?php echo formata_data_banco_com_hora($conta_receber->conta_receber_data_alteracao); ?></p>
 
                     <fieldset class="mt-4 border p-2">
 

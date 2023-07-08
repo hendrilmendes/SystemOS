@@ -16,7 +16,7 @@ body{
 .breadcrumb {
     padding-left: 0;
     margin-bottom: 1rem;
-    background-color: transparent !important;
+    background-color: #efeaff !important;
 }
 
 .table td, .table th {
@@ -24,9 +24,9 @@ body{
 }
 
 form.user .form-control-user {
-    font-size: .8rem;
-    border-radius: 5px;
-    padding: 0.8rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    padding: 1rem 1rem;
     max-height: 12px;
 }
 
@@ -37,14 +37,14 @@ form.user .form-control-user {
 }
 
 .form-control-user-date {
-    font-size: .8rem;
-    border-radius: 5px;
+    font-size: 1rem;
+    border-radius: 1rem;
     padding: 0.1rem 1rem;
     max-height: 27px;
 }
 
 .alert-danger{
-    background-color: #ff0000; 
+    background-color: #1165f1; 
     color: white;
 }
 
@@ -63,7 +63,7 @@ form.user .form-control-user {
 
 .custom-select{
     font-size: .8rem;
-    border-radius: 5px;
+    border-radius: 1rem;
 }
 
 .card-header {
@@ -83,7 +83,7 @@ form.user .form-control-user {
 
 .btn-sm {
     padding: .25rem 0.7rem;
-    font-size: .675rem;
+    font-size: .8rem;
 }
 
 .font-small{
@@ -133,7 +133,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::
 
 .select2-container--default .select2-selection--single {
     border: 1px solid #d1d3e2;
-    border-radius: 5px;
+    border-radius: 1rem;
 }
 
 .select2-container--default .select2-selection--single .select2-selection__rendered {
@@ -169,7 +169,7 @@ table.dataTable.dtr-inline.collapsed > tbody > tr[role="row"] > td:first-child::
 }
 
 .badge-counter{
-    font-size: 95%;
+    font-size: 100%;
 }
 
 .swal2-popup {
@@ -201,6 +201,3 @@ img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost
         display: none;
     }
 }
-
-
-

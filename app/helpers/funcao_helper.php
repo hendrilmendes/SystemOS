@@ -10,15 +10,15 @@ function formata_data_banco_com_hora($string) {
     if ($dia_sem == 0) {
         $semana = "Domingo";
     } elseif ($dia_sem == 1) {
-        $semana = "Segunda-feira";
+        $semana = "Segunda-Feira";
     } elseif ($dia_sem == 2) {
-        $semana = "Terça-feira";
+        $semana = "Terça-Feira";
     } elseif ($dia_sem == 3) {
-        $semana = "Quarta-feira";
+        $semana = "Quarta-Feira";
     } elseif ($dia_sem == 4) {
-        $semana = "Quinta-feira";
+        $semana = "Quinta-Feira";
     } elseif ($dia_sem == 5) {
-        $semana = "Sexta-feira";
+        $semana = "Sexta-Feira";
     } else {
         $semana = "Sábado";
     }
@@ -40,15 +40,15 @@ function formata_data_banco_sem_hora($string) {
     if ($dia_sem == 0) {
         $semana = "Domingo";
     } elseif ($dia_sem == 1) {
-        $semana = "Segunda-feira";
+        $semana = "Segunda-Feira";
     } elseif ($dia_sem == 2) {
-        $semana = "Terça-feira";
+        $semana = "Terça-Feira";
     } elseif ($dia_sem == 3) {
-        $semana = "Quarta-feira";
+        $semana = "Quarta-Feira";
     } elseif ($dia_sem == 4) {
-        $semana = "Quinta-feira";
+        $semana = "Quinta-Feira";
     } elseif ($dia_sem == 5) {
-        $semana = "Sexta-feira";
+        $semana = "Sexta-Feira";
     } else {
         $semana = "Sábado";
     }

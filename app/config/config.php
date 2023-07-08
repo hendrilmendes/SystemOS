@@ -19,7 +19,7 @@ $config['app_name'] = 'SystemOS';
 /**
  * Versão do Sistema
  */
-$config['app_version'] = 'v1.0.9';
+$config['app_version'] = '1.1.0';
 
 /*
 |--------------------------------------------------------------------------

@@ -14,7 +14,7 @@ class Sistema extends CI_Controller {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
-            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor realize seu login novamente');
+            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor faça login novamente');
             redirect('login');
         }
 
@@ -37,7 +37,7 @@ class Sistema extends CI_Controller {
 
 
         $this->form_validation->set_rules('sistema_razao_social', 'Razão social', 'required|max_length[145]');
-        $this->form_validation->set_rules('sistema_nome_fantasia', 'Nome fantasia', 'required|min_length[10]|max_length[145]');
+        $this->form_validation->set_rules('sistema_nome_fantasia', 'Nome Fantasia', 'required|min_length[10]|max_length[145]');
         $this->form_validation->set_rules('sistema_cnpj', '', 'required|exact_length[18]');
         $this->form_validation->set_rules('sistema_ie', '', 'required|max_length[25]');
         $this->form_validation->set_rules('sistema_telefone_fixo', '', 'required|max_length[25]');

@@ -12,7 +12,8 @@ Todos os direitos reservados
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; <?= $this->config->item('app_name'); ?> - <?php echo date('Y') ?>&nbsp; | By Hendril Mendes - Versão:
-            <?= $this->config->item('app_version'); ?></span>
+            <a href="https://github.com/hendrilmendes/SystemOS/blob/main/Changelog.md">
+            <?= $this->config->item('app_version'); ?> </a></span>
           </div>
         </div>
       </footer>

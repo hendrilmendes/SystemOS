@@ -14,7 +14,7 @@ class Marcas extends CI_Controller {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
-            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor realize seu login novamente');
+            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor faça login novamente');
             redirect('login');
         }
     }
@@ -63,7 +63,7 @@ class Marcas extends CI_Controller {
             //Erro de validação
 
             $data = array(
-                'titulo' => 'Cadastrar marca',
+                'titulo' => 'Cadastrar Marca',
                 'scripts' => array(
                     'vendor/mask/jquery.mask.min.js',
                     'vendor/mask/app.js',
@@ -116,7 +116,7 @@ class Marcas extends CI_Controller {
                 //Erro de validação
 
                 $data = array(
-                    'titulo' => 'Atualizar marca',
+                    'titulo' => 'Editar Marca',
                     'scripts' => array(
                         'vendor/mask/jquery.mask.min.js',
                         'vendor/mask/app.js',

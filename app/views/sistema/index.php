@@ -65,13 +65,13 @@
 
                         <div class="col-md-3">
                             <label>Razão Social</label>
-                            <input type="text" class="form-control form-control-user" name="sistema_razao_social" placeholder="Razão social" value="<?php echo $sistema->sistema_razao_social; ?>">
+                            <input type="text" class="form-control form-control-user" name="sistema_razao_social" placeholder="Razão Social" value="<?php echo $sistema->sistema_razao_social; ?>">
                             <?php echo form_error('sistema_razao_social', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
 
                         <div class="col-md-3">
-                            <label>Nome Fantasia</label>
-                            <input type="text" class="form-control form-control-user" name="sistema_nome_fantasia" placeholder="Nome fantasia" value="<?php echo $sistema->sistema_nome_fantasia; ?>">
+                            <label>Fantasia</label>
+                            <input type="text" class="form-control form-control-user" name="sistema_nome_fantasia" placeholder="Nome Fantasia" value="<?php echo $sistema->sistema_nome_fantasia; ?>">
                             <?php echo form_error('sistema_nome_fantasia', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
 
@@ -82,8 +82,8 @@
                         </div>
 
                         <div class="col-md-3">
-                            <label>Inscrição Estadual</label>
-                            <input type="text" class="form-control form-control-user" name="sistema_ie" placeholder="Inscrição estadual" value="<?php echo $sistema->sistema_ie; ?>">
+                            <label>I.E</label>
+                            <input type="text" class="form-control form-control-user" name="sistema_ie" placeholder="I.E" value="<?php echo $sistema->sistema_ie; ?>">
                             <?php echo form_error('sistema_ie', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
 
@@ -92,14 +92,14 @@
                     <div class="form-group row mb-3">
 
                         <div class="col-md-3">
-                            <label>Telefone fixo</label>
-                            <input type="text" class="form-control form-control-user sp_celphones" name="sistema_telefone_fixo" placeholder="Telefone fixo" value="<?php echo $sistema->sistema_telefone_fixo; ?>">
+                            <label>Telefone Fixo</label>
+                            <input type="tel" class="form-control form-control-user sp_celphones" name="sistema_telefone_fixo" placeholder="Telefone Fixo" value="<?php echo $sistema->sistema_telefone_fixo; ?>">
                             <?php echo form_error('sistema_telefone_fixo', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
 
                         <div class="col-md-3">
-                            <label>Telefone móvel</label>
-                            <input type="text" class="form-control form-control-user sp_celphones" name="sistema_telefone_movel" placeholder="Telefone móvel" value="<?php echo $sistema->sistema_telefone_movel; ?>">
+                            <label>Telefone Celular</label>
+                            <input type="tel" class="form-control form-control-user sp_celphones" name="sistema_telefone_movel" placeholder="Telefone Celular" value="<?php echo $sistema->sistema_telefone_movel; ?>">
                             <?php echo form_error('sistema_telefone_movel', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
 
@@ -111,7 +111,7 @@
 
                         <div class="col-md-3">
                             <label>E-mail de Contato</label>
-                            <input type="text" class="form-control form-control-user" name="sistema_email" placeholder="E-mail de contato" value="<?php echo $sistema->sistema_email; ?>">
+                            <input type="email" class="form-control form-control-user" name="sistema_email" placeholder="E-mail de contato" value="<?php echo $sistema->sistema_email; ?>">
                             <?php echo form_error('sistema_email', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
 
@@ -133,7 +133,7 @@
 
                         <div class="col-md-2">
                             <label>Número</label>
-                            <input type="text" class="form-control form-control-user" name="sistema_numero" placeholder="Número" value="<?php echo $sistema->sistema_numero; ?>">
+                            <input type="number" min="1" max="9999" class="form-control form-control-user" name="sistema_numero" placeholder="Número" value="<?php echo $sistema->sistema_numero; ?>">
                             <?php echo form_error('sistema_numero', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>
 
@@ -153,7 +153,7 @@
                     <div class="form-group row mb-3">
 
                         <div class="col-md-12">
-                            <label>Mensagem na Ordem de Servico e Venda</label>
+                            <label>Mensagem na Ordem de Serviço e Venda</label>
                             <textarea class="form-control form-control-user" name="sistema_txt_ordem_servico" placeholder="Texto da ordem de serviço e venda"><?php echo $sistema->sistema_txt_ordem_servico; ?></textarea>
                             <?php echo form_error('sistema_txt_ordem_servico', '<small class="form-text text-danger">', '</small>'); ?>
                         </div>

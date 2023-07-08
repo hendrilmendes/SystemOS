@@ -25,7 +25,7 @@
 
                 <form class="user" method="POST" name="form_edit">
 
-                    <p><strong><i class="fas fa-clock"></i>&nbsp;&nbsp;Última alteração:&nbsp;</strong><?php echo formata_data_banco_com_hora($servico->servico_data_alteracao); ?></p>
+                    <p><strong><i class="fas fa-clock"></i>&nbsp;&nbsp;Última Alteração:&nbsp;</strong><?php echo formata_data_banco_com_hora($servico->servico_data_alteracao); ?></p>
 
                     <fieldset class="mt-4 border p-2">
 
@@ -46,7 +46,7 @@
                             </div>
 
                             <div class="col-md-3">
-                                <label>Serviço ativo</label>
+                                <label>Serviço Ativo</label>
                                 <select class="custom-select" name="servico_ativo">
                                     <option value="0" <?php echo ($servico->servico_ativo == 0 ? 'selected' : ''); ?>>Não</option>
                                     <option value="1" <?php echo ($servico->servico_ativo == 1 ? 'selected' : ''); ?>>Sim</option>
@@ -59,7 +59,7 @@
 
                             <div class="col-md-12">
                                 <label>Descrição do Serviço</label>
-                                <textarea class="form-control form-control-user" name="servico_descricao" style="min-height: 100px!important"><?php echo $servico->servico_descricao; ?></textarea>
+                                <textarea class="form-control form-control-user" name="servico_descricao" placeholder="Esse será o nome que vai aparecer na busca do sistema" style="min-height: 100px!important"><?php echo $servico->servico_descricao; ?></textarea>
                                 <?php echo form_error('servico_descricao', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 

@@ -138,7 +138,7 @@ Todos os direitos reservados
                 <!-- Illustrations -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-success">TOP 3 - Produtos Mais Vendidos</h6>
+                        <h6 class="m-0 font-weight-bold text-success">TOP 3 - PRODUTOS MAIS VENDIDOS</h6>
                     </div>
                     <div class="card-body">
                         <div class="text-center">
@@ -151,8 +151,8 @@ Todos os direitos reservados
 
                                 <thead>
                                     <tr>
-                                        <th>Produtos</th>
-                                        <th class="text-center">Vendidos</th>
+                                        <th>PRODUTOS</th>
+                                        <th class="text-center">VENDIDOS</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -183,7 +183,7 @@ Todos os direitos reservados
                 <!-- Illustrations -->
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">TOP 3 - Serviços Mais Vendidos</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">TOP 3 - SERVIÇOS MAIS VENDIDOS</h6>
                     </div>
                     <div class="card-body">
                         <div class="text-center">
@@ -196,8 +196,8 @@ Todos os direitos reservados
 
                                 <thead>
                                     <tr>
-                                        <th>Serviços</th>
-                                        <th class="text-center">Vendidos</th>
+                                        <th>SERVIÇOS</th>
+                                        <th class="text-center">VENDIDOS</th>
                                     </tr>
                                 </thead>
                                 <tbody>

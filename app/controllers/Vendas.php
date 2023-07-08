@@ -14,7 +14,7 @@ class Vendas extends CI_Controller {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
-            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor realize seu login novamente');
+            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor faça login novamente');
             redirect('login');
         }
 
@@ -128,7 +128,7 @@ class Vendas extends CI_Controller {
             //Erro de validação
 
             $data = array(
-                'titulo' => 'Cadastrar venda',
+                'titulo' => 'Cadastrar Venda',
                 'styles' => array(
                     'vendor/select2/select2.min.css',
                     'vendor/autocomplete/jquery-ui.css',
@@ -255,7 +255,7 @@ class Vendas extends CI_Controller {
                 //Erro de validação
 
                 $data = array(
-                    'titulo' => 'Atualizar venda',
+                    'titulo' => 'Editar Venda',
                     'styles' => array(
                         'vendor/select2/select2.min.css',
                         'vendor/autocomplete/jquery-ui.css',

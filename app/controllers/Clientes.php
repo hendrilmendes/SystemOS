@@ -14,7 +14,7 @@ class Clientes extends CI_Controller {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
-            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor realize seu login novamente');
+            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor faça login novamente');
             redirect('login');
         }
     }
@@ -47,7 +47,6 @@ class Clientes extends CI_Controller {
 
         $this->form_validation->set_rules('cliente_nome', '', 'trim|required|min_length[4]|max_length[45]');
         $this->form_validation->set_rules('cliente_sobrenome', '', 'trim|required|min_length[4]|max_length[150]');
-        $this->form_validation->set_rules('cliente_data_nascimento', '', 'required');
 
         $cliente_tipo = $this->input->post('cliente_tipo');
 
@@ -85,7 +84,6 @@ class Clientes extends CI_Controller {
                     array(
                 'cliente_nome',
                 'cliente_sobrenome',
-                'cliente_data_nascimento',
                 'cliente_rg_ie',
                 'cliente_email',
                 'cliente_telefone',
@@ -123,7 +121,7 @@ class Clientes extends CI_Controller {
             //Erro de validação
 
             $data = array(
-                'titulo' => 'Cadastra cliente',
+                'titulo' => 'Cadastrar Cliente',
                 'scripts' => array(
                     'vendor/mask/jquery.mask.min.js',
                     'vendor/mask/app.js',
@@ -152,7 +150,6 @@ class Clientes extends CI_Controller {
 
             $this->form_validation->set_rules('cliente_nome', '', 'trim|required|min_length[4]|max_length[45]');
             $this->form_validation->set_rules('cliente_sobrenome', '', 'trim|required|min_length[4]|max_length[150]');
-            $this->form_validation->set_rules('cliente_data_nascimento', '', 'required');
 
             $cliente_tipo = $this->input->post('cliente_tipo');
            
@@ -207,7 +204,6 @@ class Clientes extends CI_Controller {
              
                     'cliente_nome',
                     'cliente_sobrenome',
-                    'cliente_data_nascimento',
                     'cliente_rg_ie',
                     'cliente_email',
                     'cliente_telefone',
@@ -246,7 +242,7 @@ class Clientes extends CI_Controller {
 
                 $data = array(
 
-                    'titulo' => 'Atualizar cliente',
+                    'titulo' => 'Editar Cliente',
                     'scripts' => array(
 
                         'vendor/mask/jquery.mask.min.js',

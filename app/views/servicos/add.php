@@ -44,7 +44,7 @@
                             </div>
 
                             <div class="col-md-3">
-                                <label>Serviço ativo</label>
+                                <label>Serviço Ativo</label>
                                 <select class="custom-select" name="servico_ativo">
                                     <option value="0">Não</option>
                                     <option value="1">Sim</option>
@@ -57,7 +57,7 @@
 
                             <div class="col-md-12">
                                 <label>Descrição do Serviço</label>
-                                <textarea class="form-control form-control-user" name="servico_descricao" style="min-height: 100px!important"><?php echo set_value('servico_descricao'); ?></textarea>
+                                <textarea class="form-control form-control-user" name="servico_descricao" placeholder="Esse será o nome que vai aparecer na busca do sistema" style="min-height: 100px!important"><?php echo set_value('servico_descricao'); ?></textarea>
                                 <?php echo form_error('servico_descricao', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 

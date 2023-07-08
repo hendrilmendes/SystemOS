@@ -65,7 +65,7 @@
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <a title="Cadastrar nova forma de pagamento" href="<?php echo base_url('modulo/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i>&nbsp;Nova</a>
+                <a title="Cadastrar Nova Forma de Pagamento" href="<?php echo base_url('modulo/add'); ?>" class="btn btn-success btn-sm float-right"><i class="fas fa-plus"></i>&nbsp;Nova</a>
             </div>
             <div class="card-body">
                 <div class="table-responsive">

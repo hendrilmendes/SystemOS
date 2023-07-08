@@ -52,7 +52,7 @@
                     </a>
 
 
-                    <a title="Cadastrar nova venda" href="<?php echo base_url('vendas/add'); ?>" class="btn btn-success btn-icon-split btn-lg mx-5">
+                    <a title="Cadastrar Nova Venda" href="<?php echo base_url('vendas/add'); ?>" class="btn btn-success btn-icon-split btn-lg mx-5">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>

@@ -25,7 +25,7 @@
 
                 <form class="user" method="POST" name="form_edit">
 
-                    <p><strong><i class="fas fa-clock"></i>&nbsp;&nbsp;Última alteração:&nbsp;</strong><?php echo formata_data_banco_com_hora($vendedor->vendedor_data_alteracao); ?></p>
+                    <p><strong><i class="fas fa-clock"></i>&nbsp;&nbsp;Última Alteração:&nbsp;</strong><?php echo formata_data_banco_com_hora($vendedor->vendedor_data_alteracao); ?></p>
 
                     <fieldset class="mt-4 border p-2">
 
@@ -62,12 +62,12 @@
                             </div>
                             <div class="col-md-3">
                                 <label>Telefone Fixo</label>
-                                <input type="text" class="form-control form-control-user sp_celphones" name="vendedor_telefone" placeholder="Telefone fixo" value="<?php echo $vendedor->vendedor_telefone; ?>">
+                                <input type="text" class="form-control form-control-user sp_celphones" name="vendedor_telefone" placeholder="Telefone Fixo" value="<?php echo $vendedor->vendedor_telefone; ?>">
                                 <?php echo form_error('vendedor_telefone', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
                             <div class="col-md-3">
-                                <label>Celular</label>
-                                <input type="text" class="form-control form-control-user sp_celphones" name="vendedor_celular" placeholder="Telefone celular" value="<?php echo $vendedor->vendedor_celular; ?>">
+                                <label>Telefone Celular</label>
+                                <input type="text" class="form-control form-control-user sp_celphones" name="vendedor_celular" placeholder="Telefone Celular" value="<?php echo $vendedor->vendedor_celular; ?>">
                                 <?php echo form_error('vendedor_celular', '<small class="form-text text-danger">', '</small>'); ?>
                             </div>
 

@@ -14,7 +14,7 @@ class Ordem_servicos extends CI_Controller {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
-            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor realize seu login novamente');
+            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor faça login novamente');
             redirect('login');
         }
 
@@ -24,7 +24,7 @@ class Ordem_servicos extends CI_Controller {
     public function index() {
 
         $data = array(
-            'titulo' => 'Ordem de Serviços Cadastradas',
+            'titulo' => 'Ordens de Serviços Cadastradas',
             'styles' => array(
                 'vendor/datatables/dataTables.bootstrap4.min.css',
             ),
@@ -120,7 +120,7 @@ class Ordem_servicos extends CI_Controller {
             //Erro de validação
 
             $data = array(
-                'titulo' => 'Cadastrar ordem de serviço',
+                'titulo' => 'Cadastrar Ordem de Serviço',
                 'styles' => array(
                     'vendor/select2/select2.min.css',
                     'vendor/autocomplete/jquery-ui.css',
@@ -240,7 +240,7 @@ class Ordem_servicos extends CI_Controller {
                 //Erro de validação
 
                 $data = array(
-                    'titulo' => 'Atualizar ordem de serviço',
+                    'titulo' => 'Editar Ordem de Serviço',
                     'styles' => array(
                         'vendor/select2/select2.min.css',
                         'vendor/autocomplete/jquery-ui.css',
@@ -369,9 +369,9 @@ class Ordem_servicos extends CI_Controller {
 
             $html .= '<th>Serviço</th>';
             $html .= '<th>Quantidade</th>';
-            $html .= '<th>Valor unitário</th>';
+            $html .= '<th>Valor Unitário</th>';
             $html .= '<th>Desconto</th>';
-            $html .= '<th>Valor total</th>';
+            $html .= '<th>Valor Total</th>';
 
             $html .= '</tr>';
 

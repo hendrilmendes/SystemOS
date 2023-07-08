@@ -14,7 +14,7 @@ class Servicos extends CI_Controller {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
-            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor realize seu login novamente');
+            $this->session->set_flashdata('info', 'Sua sessão expirou! Por favor faça login novamente');
             redirect('login');
         }
     }
@@ -42,7 +42,7 @@ class Servicos extends CI_Controller {
 
     public function add() {
 
-        $this->form_validation->set_rules('servico_nome', '', 'trim|required|min_length[10]|max_length[145]|is_unique[servicos.servico_nome]');
+        $this->form_validation->set_rules('servico_nome', '', 'trim|required|min_length[4]|max_length[145]|is_unique[servicos.servico_nome]');
         $this->form_validation->set_rules('servico_preco', '', 'trim|required');
         $this->form_validation->set_rules('servico_descricao', '', 'trim|required|max_length[700]');
 
@@ -117,7 +117,7 @@ class Servicos extends CI_Controller {
                 //Erro de validação
 
                 $data = array(
-                    'titulo' => 'Atualizar serviço',
+                    'titulo' => 'Editar Serviço',
                     'scripts' => array(
                         'vendor/mask/jquery.mask.min.js',
                         'vendor/mask/app.js',

@@ -52,7 +52,7 @@
                     </a>
 
 
-                    <a title="Cadastrar nova ordem de serviços" href="<?php echo base_url('os/add'); ?>" class="btn btn-success btn-icon-split btn-lg mx-5">
+                    <a title="Cadastrar Nova Ordem de Serviços" href="<?php echo base_url('os/add'); ?>" class="btn btn-success btn-icon-split btn-lg mx-5">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
