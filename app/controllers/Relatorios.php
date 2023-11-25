@@ -6,11 +6,13 @@ By: Isaias de Oliveira
 E-mail: visaotec.com@gmail.com
 Todos os direitos reservados
 */
-defined('BASEPATH') OR exit('Ação não permitida');
+defined('BASEPATH') or exit('Ação não permitida');
 
-class Relatorios extends CI_Controller {
+class Relatorios extends CI_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
@@ -24,7 +26,8 @@ class Relatorios extends CI_Controller {
         }
     }
 
-    public function vendas() {
+    public function vendas()
+    {
 
         $data = array(
             'titulo' => 'Relatórios de Vendas'
@@ -33,7 +36,7 @@ class Relatorios extends CI_Controller {
         $data_inicial = $this->input->post('data_inicial');
         $data_final = $this->input->post('data_final');
 
-//        echo '<pre>';
+        //        echo '<pre>';
 //        print_r($this->input->post());
 //        exit();
 
@@ -50,7 +53,7 @@ class Relatorios extends CI_Controller {
 
                 $vendas = $this->vendas_model->gerar_relatorio_vendas($data_inicial, $data_final);
 
-                $file_name = 'Relatório de vendas';
+                $file_name = 'Relatório de Vendas';
 
 
                 //Início do HTML
@@ -85,14 +88,14 @@ class Relatorios extends CI_Controller {
                     $html .= '<p align="center" style="font-size: 12px">Relatório de vendas realizadas a partir da data:</p>';
                     $html .= '<p align="center" style="font-size: 12px">' . formata_data_banco_sem_hora($data_inicial) . '</p>';
                 }
-//
-//                $html .= '<p>'
-//                        . '<strong>Cliente: </strong>' . $venda->cliente_nome_completo . '<br/>'
-//                        . '<strong>CPF: </strong>' . $venda->cliente_cpf_cnpj . '<br/>'
-//                        . '<strong>Celular: </strong>' . $venda->cliente_celular . '<br/>'
-//                        . '<strong>Data de Emissão: </strong>' . formata_data_banco_com_hora($venda->venda_data_emissao) . '<br/>'
-//                        . '<strong>Forma de Pagamento: </strong>' . $venda->forma_pagamento . '<br/>'
-//                        . '</p>';
+
+                // $html .= '<p>'
+                //     . '<strong>Cliente: </strong>' . $venda->cliente_nome_completo . '<br/>'
+                //     . '<strong>CPF: </strong>' . $venda->cliente_cpf_cnpj . '<br/>'
+                //     . '<strong>Celular: </strong>' . $venda->cliente_celular . '<br/>'
+                //     . '<strong>Data de Emissão: </strong>' . formata_data_banco_com_hora($venda->venda_data_emissao) . '<br/>'
+                //     . '<strong>Forma de Pagamento: </strong>' . $venda->forma_pagamento . '<br/>'
+                //     . '</p>';
 
 
                 $html .= '<hr>';
@@ -143,12 +146,12 @@ class Relatorios extends CI_Controller {
                 echo '<pre>';
                 print_r($html);
                 exit();
-//            
+                //            
                 // False -> Abre PDF no navegador
                 // True -> Faz o download
 
                 $this->pdf->createPDF($html, $file_name, false);
-            }else {
+            } else {
 
                 if (!empty($data_inicial) && !empty($data_final)) {
                     $this->session->set_flashdata('info', 'Não foram encontradas Vendas entre as datas ' . formata_data_banco_sem_hora($data_inicial) . '&nbsp;e&nbsp;' . formata_data_banco_sem_hora($data_final));
@@ -164,7 +167,8 @@ class Relatorios extends CI_Controller {
         $this->load->view('layout/footer');
     }
 
-    public function os() {
+    public function os()
+    {
 
         $data = array(
             'titulo' => 'Relatórios de ordens de serviços'
@@ -271,7 +275,7 @@ class Relatorios extends CI_Controller {
 
                 $html .= '</html>';
 
-//                echo '<pre>';
+                //                echo '<pre>';
 //                print_r($html);
 //                exit();
 //            
@@ -279,7 +283,7 @@ class Relatorios extends CI_Controller {
                 // True -> Faz o download
 
                 $this->pdf->createPDF($html, $file_name, false);
-            }else {
+            } else {
 
                 if (!empty($data_inicial) && !empty($data_final)) {
                     $this->session->set_flashdata('info', 'Não foram encontradas Ordens de serviços entre as datas ' . formata_data_banco_sem_hora($data_inicial) . '&nbsp;e&nbsp;' . formata_data_banco_sem_hora($data_final));
@@ -295,7 +299,8 @@ class Relatorios extends CI_Controller {
         $this->load->view('layout/footer');
     }
 
-    public function receber() {
+    public function receber()
+    {
 
         $data = array(
             'titulo' => 'Relatório de contas a receber'
@@ -388,7 +393,7 @@ class Relatorios extends CI_Controller {
 
                     $html .= '</html>';
 
-//                echo '<pre>';
+                    //                echo '<pre>';
 //                print_r($html);
 //                exit();
 //            
@@ -396,7 +401,7 @@ class Relatorios extends CI_Controller {
                     // True -> Faz o download
 
                     $this->pdf->createPDF($html, $file_name, false);
-                }else {
+                } else {
 
                     $this->session->set_flashdata('info', 'Não existem contas vencidas na base de dados');
                     redirect('relatorios/receber');
@@ -479,7 +484,7 @@ class Relatorios extends CI_Controller {
 
                     $html .= '</html>';
 
-//                echo '<pre>';
+                    //                echo '<pre>';
 //                print_r($html);
 //                exit();
 //            
@@ -487,7 +492,7 @@ class Relatorios extends CI_Controller {
                     // True -> Faz o download
 
                     $this->pdf->createPDF($html, $file_name, false);
-                }else {
+                } else {
 
                     $this->session->set_flashdata('info', 'Não existem contas pagas na base de dados');
                     redirect('relatorios/receber');
@@ -570,7 +575,7 @@ class Relatorios extends CI_Controller {
 
                     $html .= '</html>';
 
-//                echo '<pre>';
+                    //                echo '<pre>';
 //                print_r($html);
 //                exit();
 //            
@@ -578,7 +583,7 @@ class Relatorios extends CI_Controller {
                     // True -> Faz o download
 
                     $this->pdf->createPDF($html, $file_name, false);
-                }else {
+                } else {
 
                     $this->session->set_flashdata('info', 'Não existem contas a receber na base de dados');
                     redirect('relatorios/receber');
@@ -593,7 +598,8 @@ class Relatorios extends CI_Controller {
         $this->load->view('layout/footer');
     }
 
-    public function pagar() {
+    public function pagar()
+    {
 
         $data = array(
             'titulo' => 'Relatório de contas a pagar'
@@ -686,7 +692,7 @@ class Relatorios extends CI_Controller {
 
                     $html .= '</html>';
 
-//                echo '<pre>';
+                    //                echo '<pre>';
 //                print_r($html);
 //                exit();
 //            
@@ -694,7 +700,7 @@ class Relatorios extends CI_Controller {
                     // True -> Faz o download
 
                     $this->pdf->createPDF($html, $file_name, false);
-                }else {
+                } else {
 
                     $this->session->set_flashdata('info', 'Não existem contas vencidas na base de dados');
                     redirect('relatorios/pagar');
@@ -783,7 +789,7 @@ class Relatorios extends CI_Controller {
 
                     $html .= '</html>';
 
-//                echo '<pre>';
+                    //                echo '<pre>';
 //                print_r($html);
 //                exit();
 //            
@@ -791,7 +797,7 @@ class Relatorios extends CI_Controller {
                     // True -> Faz o download
 
                     $this->pdf->createPDF($html, $file_name, false);
-                }else {
+                } else {
 
                     $this->session->set_flashdata('info', 'Não existem contas pagas na base de dados');
                     redirect('relatorios/pagar');
@@ -879,7 +885,7 @@ class Relatorios extends CI_Controller {
 
                     $html .= '</html>';
 
-//                echo '<pre>';
+                    //                echo '<pre>';
 //                print_r($html);
 //                exit();
 //            
@@ -887,7 +893,7 @@ class Relatorios extends CI_Controller {
                     // True -> Faz o download
 
                     $this->pdf->createPDF($html, $file_name, false);
-                }else {
+                } else {
 
                     $this->session->set_flashdata('info', 'Não existem contas a pagar na base de dados');
                     redirect('relatorios/pagar');

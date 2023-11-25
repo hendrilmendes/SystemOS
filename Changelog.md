@@ -1,6 +1,11 @@
 Changelog SystemOS
 
 ======================================================
+#### v1.2.0
+- Corrigido falha de exportação do arquivo db_systemos.sql
+- Correções Menores
+
+======================================================
 #### v1.1.0
 - Removido campo Data de Nascimento
 - Correções de escritas em várias partes do sistema

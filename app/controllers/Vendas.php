@@ -6,11 +6,13 @@ By: Isaias de Oliveira
 E-mail: visaotec.com@gmail.com
 Todos os direitos reservados
 */
-defined('BASEPATH') OR exit('Ação não permitida');
+defined('BASEPATH') or exit('Ação não permitida');
 
-class Vendas extends CI_Controller {
+class Vendas extends CI_Controller
+{
 
-    public function __construct() {
+    public function __construct()
+    {
         parent::__construct();
 
         if (!$this->ion_auth->logged_in()) {
@@ -22,7 +24,8 @@ class Vendas extends CI_Controller {
         $this->load->model('produtos_model');
     }
 
-    public function index() {
+    public function index()
+    {
 
         $data = array(
             'titulo' => 'Vendas Cadastradas',
@@ -37,7 +40,7 @@ class Vendas extends CI_Controller {
             'vendas' => $this->vendas_model->get_all(),
         );
 
-//        echo '<pre>';
+        //        echo '<pre>';
 //        print_r($data['vendas']);
 //        exit();
 
@@ -46,7 +49,8 @@ class Vendas extends CI_Controller {
         $this->load->view('layout/footer');
     }
 
-    public function add() {
+    public function add()
+    {
 
         $this->form_validation->set_rules('venda_cliente_id', '', 'required');
         $this->form_validation->set_rules('venda_tipo', '', 'required');
@@ -59,14 +63,15 @@ class Vendas extends CI_Controller {
             $venda_valor_total = str_replace('R$', "", trim($this->input->post('venda_valor_total')));
 
             $data = elements(
-                    array(
-                'venda_cliente_id',
-                'venda_forma_pagamento_id',
-                'venda_tipo',
-                'venda_vendedor_id',
-                'venda_valor_desconto',
-                'venda_valor_total',
-                    ), $this->input->post()
+                array(
+                    'venda_cliente_id',
+                    'venda_forma_pagamento_id',
+                    'venda_tipo',
+                    'venda_vendedor_id',
+                    'venda_valor_desconto',
+                    'venda_valor_total',
+                ),
+                $this->input->post()
             );
 
             $data['venda_valor_total'] = trim(preg_replace('/\$/', '', $venda_valor_total));
@@ -121,7 +126,7 @@ class Vendas extends CI_Controller {
                 $this->produtos_model->update($produto_id[$i], $produto_qtde_estoque);
 
                 /* Fim atualização estoque */
-            }//Fim for
+            } //Fim for
             redirect('vendas/imprimir/' . $id_venda);
         } else {
 
@@ -148,7 +153,7 @@ class Vendas extends CI_Controller {
                 'vendedores' => $this->core_model->get_all('vendedores', array('vendedor_ativo' => 1)),
             );
 
-//                echo '<pre>';
+            //                echo '<pre>';
 //                print_r($venda_produtos);
 //                exit();
 
@@ -158,7 +163,8 @@ class Vendas extends CI_Controller {
         }
     }
 
-    public function edit($venda_id = NULL) {
+    public function edit($venda_id = NULL)
+    {
 
         if (!$venda_id || !$this->core_model->get_by_id('vendas', array('venda_id' => $venda_id))) {
             $this->session->set_flashdata('error', 'Venda não encontrada');
@@ -181,14 +187,15 @@ class Vendas extends CI_Controller {
                 $venda_valor_total = str_replace('R$', "", trim($this->input->post('venda_valor_total')));
 
                 $data = elements(
-                        array(
-                    'venda_cliente_id',
-                    'venda_forma_pagamento_id',
-                    'venda_tipo',
-                    'venda_vendedor_id',
-                    'venda_valor_desconto',
-                    'venda_valor_total',
-                        ), $this->input->post()
+                    array(
+                        'venda_cliente_id',
+                        'venda_forma_pagamento_id',
+                        'venda_tipo',
+                        'venda_vendedor_id',
+                        'venda_valor_desconto',
+                        'venda_valor_total',
+                    ),
+                    $this->input->post()
                 );
 
                 $data['venda_valor_total'] = trim(preg_replace('/\$/', '', $venda_valor_total));
@@ -233,7 +240,7 @@ class Vendas extends CI_Controller {
 
                     /* Início atualização estoque */
 
-//                    foreach ($venda_produtos as $venda_p) {
+                    //                    foreach ($venda_produtos as $venda_p) {
 //
 //                        if ($venda_p->venda_produto_quantidade < $produto_quantidade[$i]) {
 //
@@ -247,7 +254,7 @@ class Vendas extends CI_Controller {
 //                        }
 //                    }
                     /* Fim atualização estoque */
-                }//Fim for
+                } //Fim for
 //                redirect('vendas/imprimir/' . $venda_id);
                 redirect('vendas');
             } else {
@@ -278,7 +285,7 @@ class Vendas extends CI_Controller {
                     'desabilitar' => TRUE, //Desabilita botão de submit
                 );
 
-//                echo '<pre>';
+                //                echo '<pre>';
 //                print_r($venda_produtos);
 //                exit();
 
@@ -289,7 +296,8 @@ class Vendas extends CI_Controller {
         }
     }
 
-    public function del($venda_id = NULL) {
+    public function del($venda_id = NULL)
+    {
 
         if (!$venda_id || !$this->core_model->get_by_id('vendas', array('venda_id' => $venda_id))) {
             $this->session->set_flashdata('error', 'Venda não encontrada');
@@ -301,7 +309,8 @@ class Vendas extends CI_Controller {
         }
     }
 
-    public function imprimir($venda_id = NULL) {
+    public function imprimir($venda_id = NULL)
+    {
 
         if (!$venda_id || !$this->core_model->get_by_id('vendas', array('venda_id' => $venda_id))) {
             $this->session->set_flashdata('error', 'Venda não encontrada');
@@ -319,7 +328,8 @@ class Vendas extends CI_Controller {
         }
     }
 
-    public function pdf($venda_id = NULL) {
+    public function pdf($venda_id = NULL)
+    {
 
         if (!$venda_id || !$this->core_model->get_by_id('vendas', array('venda_id' => $venda_id))) {
             $this->session->set_flashdata('error', 'Venda não encontrada');
@@ -346,7 +356,6 @@ class Vendas extends CI_Controller {
             $html .= '</head>';
 
             $html .= '<body style="font-size: 14px">';
-
             $html .= '<h4 align="center">
                 ' . $empresa->sistema_razao_social . '<br/>
                 ' . 'CNPJ: ' . $empresa->sistema_cnpj . '<br/>
@@ -361,12 +370,12 @@ class Vendas extends CI_Controller {
             //Dados do cliente
 
             $html .= '<p>'
-                    . '<strong>Cliente: </strong>' . $venda->cliente_nome_completo . '<br/>'
-                    . '<strong>CPF: </strong>' . $venda->cliente_cpf_cnpj . '<br/>'
-                    . '<strong>Celular: </strong>' . $venda->cliente_celular . '<br/>'
-                    . '<strong>Data de Emissão: </strong>' . formata_data_banco_com_hora($venda->venda_data_emissao) . '<br/>'
-                    . '<strong>Forma de Pagamento: </strong>' . $venda->forma_pagamento . '<br/>'
-                    . '</p>';
+                . '<strong>Cliente: </strong>' . $venda->cliente_nome_completo . '<br/>'
+                . '<strong>CPF: </strong>' . $venda->cliente_cpf_cnpj . '<br/>'
+                . '<strong>Celular: </strong>' . $venda->cliente_celular . '<br/>'
+                . '<strong>Data de Emissão: </strong>' . formata_data_banco_com_hora($venda->venda_data_emissao) . '<br/>'
+                . '<strong>Forma de Pagamento: </strong>' . $venda->forma_pagamento . '<br/>'
+                . '</p>';
 
 
             $html .= '<hr>';
@@ -390,17 +399,17 @@ class Vendas extends CI_Controller {
 
 
 
-//            $venda_id = $venda->venda_id;
+            //            $venda_id = $venda->venda_id;
 
             $produtos_venda = $this->vendas_model->get_all_produtos($venda_id);
 
-//            echo '<pre>';
+            //            echo '<pre>';
 //            print_r($servicos_ordem);
 //            exit();
 
             $valor_final_venda = $this->vendas_model->get_valor_final_venda($venda_id);
 
-//            echo '<pre>';
+            //            echo '<pre>';
 //            print_r($valor_final_os);
 //            exit();
 
@@ -416,9 +425,9 @@ class Vendas extends CI_Controller {
                 $html .= '</tr>';
 
             endforeach;
-
+           
             $html .= '<th colspan="4">';
-
+            
             $html .= '<td align="center" style="border-top: solid #ddd 1px"><strong>Valor Final</strong></td>';
             $html .= '<td align="center" style="border-top: solid #ddd 1px">' . 'R$&nbsp;' . $valor_final_venda->venda_valor_total . '</td>';
 
@@ -430,7 +439,7 @@ class Vendas extends CI_Controller {
 
             $html .= '</html>';
 
-//            echo '<pre>';
+            //            echo '<pre>';
 //            print_r($html);
 //            exit();
 //            
